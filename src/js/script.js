@@ -6,13 +6,12 @@
 const IMPULSE_CONFIG = {
   // Main project slots
   totalSlots: 8,
-  availableSlots: 3,
+  availableSlots: 2,
   currentYear: 2025,
 
   // Labs capacity
-  labsTotal: 12,
-  labsOccupied: 9,
-  waitingList: 47,
+  labsTotal: 8,
+  labsOccupied: 6,
 
   // Performance metrics
   selectionRate: '8.7%',
@@ -130,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title.style.textShadow = '2px 0 #ff4500, -2px 0 #00ffff';
       setTimeout(() => {
         title.style.textShadow = 'none';
-      }, 250);
+      }, 350);
     });
   });
 });
