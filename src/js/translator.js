@@ -30,7 +30,7 @@ class Translator {
 
   async load(language) {
     try {
-      const response = await fetch(`/i18n/${language}.json`);
+      const response = await fetch(`./i18n/${language}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load ${language}.json`);
       }
