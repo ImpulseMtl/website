@@ -4,12 +4,23 @@ class Translator {
     this.translations = {};
     this.originalTemplates = new Map();
     this.templateRegex = /\{\{([^}]+)\}\}/g;
+    this.availableTranslations = {};
   }
 
   async init() {
+    this.loadTranslations();
     this.storeOriginalTemplates();
     const browserLang = navigator.language.split('-')[0];
-    await this.load(browserLang);
+    this.load(browserLang);
+  }
+
+  loadTranslations() {
+    if (typeof en !== 'undefined') {
+      this.availableTranslations.en = en;
+    }
+    if (typeof fr !== 'undefined') {
+      this.availableTranslations.fr = fr;
+    }
   }
 
   storeOriginalTemplates() {
@@ -28,23 +39,18 @@ class Translator {
     }
   }
 
-  async load(language) {
-    try {
-      const response = await fetch(`./i18n/${language}.json`);
-      if (!response.ok) {
-        throw new Error(`Failed to load ${language}.json`);
-      }
-
-      this.translations = await response.json();
+  load(language) {
+    if (this.availableTranslations[language]) {
+      this.translations = this.availableTranslations[language];
       this.currentLanguage = language;
       this.applyTranslations();
       this.updateHtmlLang();
-    } catch (error) {
+    } else {
       console.warn(
         `Translation file for ${language} not found, falling back to en`
       );
-      if (language !== 'en') {
-        await this.load('en');
+      if (language !== 'en' && this.availableTranslations.en) {
+        this.load('en');
       }
     }
   }
