@@ -346,13 +346,27 @@
               </div>
               <div class="terminal-line">
                 <span class="output"
-                  >> <span data-value="contact-email"></span
+                  >>
+                  <a href="#" class="email-link" onclick="openContactForm()"
+                    ><span data-value="contact-email"></span></a
                 ></span>
               </div>
               <div class="terminal-line">
                 <span class="output"
                   >> <span data-value="contact-phone"></span
                 ></span>
+              </div>
+              <div class="terminal-line"></div>
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="compose-command" onclick="openContactForm()"
+                  >compose --new-message</span
+                >
+              </div>
+              <div class="terminal-line">
+                <span class="comment"
+                  ># Click above to launch secure communication channel</span
+                >
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
@@ -373,6 +387,115 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Form Modal -->
+    <div class="contact-modal" id="contactModal">
+      <div class="contact-form-terminal">
+        <div class="form-header">
+          <div class="form-title">
+            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-yellow"></div>
+            <div class="terminal-dot dot-green"></div>
+            <span>secure_message.send</span>
+          </div>
+          <button class="close-btn" onclick="closeContactForm()"></button>
+        </div>
+        <div class="form-body">
+          <div class="success-message" id="successMessage">
+            <strong>✓ Message transmitted successfully!</strong><br />
+            Our engineering team will evaluate your project within 48 hours.
+          </div>
+
+          <form
+            id="contactForm"
+            onsubmit="sendMessage(event)"
+            novalidate
+            autocomplete="off"
+          >
+            <div class="form-group">
+              <label class="form-label">$ whoami --name</label>
+              <input
+                type="text"
+                class="form-input"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="off"
+              />
+              <div class="validation-error" id="name-error">
+                Name is required
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">$ echo $EMAIL_ADDRESS</label>
+              <input
+                type="text"
+                class="form-input"
+                name="email"
+                placeholder="your.email@domain.com"
+                autocomplete="off"
+              />
+              <div class="validation-error" id="email-error">
+                Valid email address required
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">$ cat project_summary.txt</label>
+              <input
+                type="text"
+                class="form-input"
+                name="subject"
+                placeholder="Brief project title/summary"
+                autocomplete="off"
+              />
+              <div class="validation-error" id="subject-error">
+                Project summary is required
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">$ vim project_details.md</label>
+              <textarea
+                class="form-textarea"
+                name="message"
+                placeholder="Technical specifications, scale requirements, timeline, budget range, and why this project requires IMPULSE's expertise...
+
+Example structure:
+- Problem Statement
+- Technical Complexity
+- Scale Requirements  
+- Innovation Impact
+- Timeline & Budget
+- Why IMPULSE?"
+                autocomplete="off"
+              ></textarea>
+              <div class="validation-error" id="message-error">
+                Project details are required
+              </div>
+            </div>
+
+            <div class="form-buttons">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="closeContactForm()"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="submitBtn"
+                onclick="handleFormSubmit()"
+              >
+                <span id="submitText">./send --secure</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

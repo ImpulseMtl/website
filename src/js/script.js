@@ -103,21 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Typewriter effect for hero
   const heroCommand = document.querySelector('.hero-command');
-  const originalText = './execute --breakthrough-systems';
-  heroCommand.innerHTML = '';
+  if (heroCommand) {
+    const originalText = './execute --breakthrough-systems';
+    heroCommand.innerHTML = '';
 
-  let i = 0;
-  function typeWriter() {
-    if (i < originalText.length) {
-      heroCommand.innerHTML += originalText.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    } else {
-      heroCommand.innerHTML += '<span class="cursor"></span>';
+    let i = 0;
+    function typeWriter() {
+      if (i < originalText.length) {
+        heroCommand.innerHTML += originalText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      } else {
+        heroCommand.innerHTML += '<span class="cursor"></span>';
+      }
     }
-  }
 
-  setTimeout(typeWriter, 1000);
+    setTimeout(typeWriter, 1000);
+  }
 
   // Glitch effect on lab items
   document.querySelectorAll('.lab-item').forEach((item) => {
@@ -182,3 +184,186 @@ function updateWaitingList(count) {
 
   console.log(`✓ Waiting list updated: ${count} projects`);
 }
+
+// ============================================================================
+// CONTACT FORM FUNCTIONALITY
+// ============================================================================
+
+// Contact form functions
+function openContactForm() {
+  const modal = document.getElementById('contactModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeContactForm() {
+  const modal = document.getElementById('contactModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+
+    // Reset form
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    if (form) form.reset();
+    if (successMessage) successMessage.classList.remove('show');
+
+    // Hide all validation errors
+    hideAllValidationErrors();
+  }
+}
+
+// ============================================================================
+// FORM VALIDATION FUNCTIONS
+// ============================================================================
+
+function showValidationError(fieldName, message) {
+  const errorElement = document.getElementById(`${fieldName}-error`);
+  if (errorElement) {
+    errorElement.textContent = message;
+    errorElement.classList.add('show');
+  }
+}
+
+function hideValidationError(fieldName) {
+  const errorElement = document.getElementById(`${fieldName}-error`);
+  if (errorElement) {
+    errorElement.classList.remove('show');
+  }
+}
+
+function hideAllValidationErrors() {
+  const errorElements = document.querySelectorAll('.validation-error');
+  errorElements.forEach((element) => {
+    element.classList.remove('show');
+  });
+}
+
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validateForm(formData) {
+  let isValid = true;
+  hideAllValidationErrors();
+
+  // Validate name
+  if (!formData.get('name') || formData.get('name').trim() === '') {
+    showValidationError('name', 'Name is required');
+    isValid = false;
+  }
+
+  // Validate email
+  const email = formData.get('email');
+  if (!email || email.trim() === '') {
+    showValidationError('email', 'Email address is required');
+    isValid = false;
+  } else if (!validateEmail(email)) {
+    showValidationError('email', 'Valid email address required');
+    isValid = false;
+  }
+
+  // Validate subject
+  if (!formData.get('subject') || formData.get('subject').trim() === '') {
+    showValidationError('subject', 'Project summary is required');
+    isValid = false;
+  }
+
+  // Validate message
+  const message = formData.get('message');
+  if (!message || message.trim() === '') {
+    showValidationError('message', 'Project details are required');
+    isValid = false;
+  } else if (message.trim().length < 50) {
+    showValidationError(
+      'message',
+      'Please provide more detailed project information (minimum 50 characters)'
+    );
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+function handleFormSubmit() {
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const submitText = document.getElementById('submitText');
+  const successMessage = document.getElementById('successMessage');
+
+  if (!form || !submitBtn || !submitText || !successMessage) return;
+
+  // Get form data and validate
+  const formData = new FormData(form);
+
+  // Custom validation
+  if (!validateForm(formData)) {
+    return; // Stop if validation fails
+  }
+
+  // Show loading state
+  form.classList.add('loading');
+  submitText.innerHTML = '<span class="spinner"></span>Transmitting...';
+
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    subject: formData.get('subject'),
+    message: formData.get('message'),
+  };
+
+  // Simulate API call (replace with your actual endpoint)
+  setTimeout(() => {
+    // In a real implementation, you'd send this to your backend
+    console.log('Form data:', data);
+
+    // Show success message
+    form.classList.remove('loading');
+    submitText.innerHTML = './send --secure';
+    successMessage.classList.add('show');
+    hideAllValidationErrors();
+
+    // Reset form after delay
+    setTimeout(() => {
+      form.reset();
+    }, 1000);
+
+    // Auto-close modal after 3 seconds
+    setTimeout(() => {
+      closeContactForm();
+    }, 3000);
+  }, 2000); // Simulate network delay
+}
+
+function sendMessage(event) {
+  event.preventDefault();
+  handleFormSubmit();
+}
+
+// Event listeners for contact form
+document.addEventListener('DOMContentLoaded', function () {
+  // Close modal on escape key
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeContactForm();
+    }
+  });
+
+  // Close modal on outside click
+  const modal = document.getElementById('contactModal');
+  if (modal) {
+    modal.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        closeContactForm();
+      }
+    });
+  }
+});
+
+window.openContactForm = openContactForm;
+window.closeContactForm = closeContactForm;
+window.sendMessage = sendMessage;
+window.handleFormSubmit = handleFormSubmit;
