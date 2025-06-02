@@ -606,11 +606,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #ff4500;
+  background: #333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #ff4500;
   border-radius: 4px;
 }

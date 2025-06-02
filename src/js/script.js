@@ -17,7 +17,6 @@ const IMPULSE_CONFIG = {
   // Performance metrics
   selectionRate: '8.7%',
   systemUptime: '99.99%',
-  reliabilityPercent: 99.99,
   edgeLatency: '<5ms',
 
   // Project scale metrics
@@ -60,9 +59,6 @@ const CALCULATED_VALUES = {
 
   // Waiting list
   'waiting-list': `${IMPULSE_CONFIG.waitingList} projects on waiting list`,
-
-  // Reliability percent (for code section)
-  'reliability-percent': IMPULSE_CONFIG.reliabilityPercent,
 
   // Edge latency
   'edge-latency': IMPULSE_CONFIG.edgeLatency,
