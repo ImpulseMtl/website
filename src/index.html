@@ -145,45 +145,88 @@
         <div>
           <div class="code-block">
             <div class="code-header">
-              <span class="code-title">innovation_engine.py</span>
+              <span class="code-title">innovation_engine.rs</span>
               <span class="comment">// Core Systems</span>
             </div>
             <div class="code-line">
-              <span class="keyword">class</span>
-              <span class="string">ImpulseCore</span>:
+              <span class="keyword">struct</span>
+              <span class="string">ImpulseCore</span> {
             </div>
             <div class="code-line">
-              <span class="keyword">def</span>
-              <span class="string">__init__</span>(self):
+              &nbsp;&nbsp;&nbsp;&nbsp;embedded:
+              <span class="string">&str</span>,
             </div>
             <div class="code-line">
-              self.embedded = <span class="string">"Rust + C/C++"</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;distributed:
+              <span class="string">&str</span>,
             </div>
             <div class="code-line">
-              self.distributed =
-              <span class="string">"Go + Kubernetes + Swarm"</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;iot: <span class="string">&str</span>,
             </div>
             <div class="code-line">
-              self.iot = <span class="string">"MQTT + Edge Computing"</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;ai: <span class="string">&str</span>,
             </div>
             <div class="code-line">
-              self.ai = <span class="string">"LangChain + PyTorch"</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;reliability:
+              <span class="keyword">f64</span>,
             </div>
-            <div class="code-line">
-              self.reliability =
-              <span class="number" data-value="reliability-percent"></span>
-              <span class="comment"># %</span>
-            </div>
+            <div class="code-line">}</div>
             <div class="code-line"></div>
             <div class="code-line">
-              <span class="keyword">def</span>
-              <span class="string">deploy_innovation</span>(self,
-              impossible_idea):
+              <span class="keyword">impl</span>
+              <span class="string">ImpulseCore</span> {
             </div>
             <div class="code-line">
-              <span class="keyword">return</span>
-              self.make_it_work(impossible_idea)
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">fn</span>
+              <span class="string">new</span>() ->
+              <span class="keyword">Self</span> {
             </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                class="string"
+                >Self</span
+              >
+              {
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;embedded:
+              <span class="string">"Rust + C/C++"</span>,
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distributed:
+              <span class="string">"Go + Kubernetes + Swarm"</span>,
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iot:
+              <span class="string">"MQTT + Edge Computing"</span>,
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ai:
+              <span class="string">"LangChain + PyTorch"</span>,
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reliability:
+              <span class="number" data-value="reliability-percent"></span>,
+              <span class="comment">// %</span>
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+            <div class="code-line"></div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">fn</span>
+              <span class="string">deploy_innovation</span>(&self,
+              impossible_idea: <span class="keyword">String</span>) ->
+              <span class="keyword">Result</span>&lt;<span class="keyword"
+                >String</span
+              >, <span class="keyword">String</span>&gt; {
+            </div>
+            <div class="code-line">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.make_it_work(impossible_idea)
+            </div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+            <div class="code-line">}</div>
           </div>
         </div>
       </div>
