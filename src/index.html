@@ -32,27 +32,27 @@
       </div>
 
       <div class="hero-output">
-        > Initializing distributed innovation protocols...<br />
-        > We architect the impossible.<br />
-        > Systems that operate at the edge of what's technically feasible.<br />
+        > Building systems that actually work.<br />
+        > The kind of engineering that keeps systems running at 3AM.<br />
         >
         <span class="highlight"
-          >WARNING: Only 3 project slots available for 2025</span
-        >
+          >Currently: <span data-value="available-slots-text"></span> project
+          slots still open for <span data-value="current-year"></span
+        ></span>
       </div>
 
       <div class="system-stats">
         <div class="stat">
           <div class="stat-label">Current Availability</div>
-          <div class="stat-value">3/8 Slots</div>
+          <div class="stat-value" data-value="current-availability"></div>
         </div>
         <div class="stat">
           <div class="stat-label">Selection Rate</div>
-          <div class="stat-value">8.7%</div>
+          <div class="stat-value" data-value="selection-rate"></div>
         </div>
         <div class="stat">
           <div class="stat-label">System Uptime</div>
-          <div class="stat-value">99.99%</div>
+          <div class="stat-value" data-value="system-uptime"></div>
         </div>
         <div class="stat">
           <div class="stat-label">Innovation Velocity</div>
@@ -67,9 +67,9 @@
         <div class="section-label">01 // Manifesto</div>
         <div class="manifesto-text">
           While others debate the future,
-          <span class="highlight">we build it</span>. Every embedded system,
-          every distributed network, every IoT deployment is a step toward a
-          world where
+          <span class="highlight">we build it</span>. Every system, every
+          distributed network, every IoT deployment is a step toward a world
+          where
           <span class="highlight"
             >technology doesn't just serve humanity—it amplifies human potential
             exponentially</span
@@ -85,8 +85,9 @@
         <div>
           <div class="selection-content">
             <h2 class="selection-title">
-              We choose <span class="highlight">8 projects</span> per year.
-              Maximum.
+              We choose
+              <span class="highlight" data-value="max-projects-per-year"></span>
+              per year. Maximum.
             </h2>
             <p class="selection-desc">
               Not because we can't handle more. Because breakthrough innovation
@@ -130,7 +131,7 @@
           <div class="availability-status">
             <div class="status-indicator">
               <div class="status-light"></div>
-              <span>2025 INTAKE: 3 slots remaining</span>
+              <span data-value="intake-status"></span>
             </div>
           </div>
         </div>
@@ -169,7 +170,8 @@
               self.ai = <span class="string">"LangChain + PyTorch"</span>
             </div>
             <div class="code-line">
-              self.reliability = <span class="number">99.99</span>
+              self.reliability =
+              <span class="number" data-value="reliability-percent"></span>
               <span class="comment"># %</span>
             </div>
             <div class="code-line"></div>
@@ -195,7 +197,7 @@
           <div class="metrics-grid">
             <div class="metric-card">
               <div class="metric-content">
-                <div class="metric-number">&lt;5ms</div>
+                <div class="metric-number" data-value="edge-latency"></div>
                 <div class="metric-label">Edge Latency</div>
                 <div class="metric-desc">
                   Real-time decision making at network edge
@@ -224,8 +226,8 @@
           <div class="labs-header">
             <h2 class="labs-title">Current Active Projects</h2>
             <div class="labs-status">
-              <span class="status-text">9/12 slots occupied</span>
-              <span class="waiting-list">47 projects on waiting list</span>
+              <span class="status-text" data-value="labs-status"></span>
+              <span class="waiting-list" data-value="waiting-list"></span>
             </div>
           </div>
 
@@ -236,7 +238,7 @@
               <div class="lab-tech">Edge ML • LoRaWAN • Sensor Fusion</div>
               <div class="lab-desc">
                 Distributed sensor networks processing environmental data in
-                real-time across 10M+ acres
+                real-time across <span data-value="agtech-scale"></span> acres
               </div>
             </div>
 
@@ -245,8 +247,8 @@
               <div class="lab-title">Ultra-Low Latency Trading</div>
               <div class="lab-tech">FPGA • Custom Silicon • Kernel Bypass</div>
               <div class="lab-desc">
-                Sub-microsecond execution engines processing 100M+ transactions
-                daily
+                Sub-microsecond execution engines processing
+                <span data-value="fintech-scale"></span> transactions daily
               </div>
             </div>
 
@@ -266,7 +268,8 @@
                 Distributed Consensus • RF Mesh • Edge AI
               </div>
               <div class="lab-desc">
-                Coordinated autonomous operations for 1000+ drone swarms
+                Coordinated autonomous operations for
+                <span data-value="aerospace-scale"></span> drone swarms
               </div>
             </div>
           </div>
@@ -320,10 +323,14 @@
                 <span class="output">> Application endpoints:</span>
               </div>
               <div class="terminal-line">
-                <span class="output">> projects@impulsemtl.ca</span>
+                <span class="output"
+                  >> <span data-value="contact-email"></span
+                ></span>
               </div>
               <div class="terminal-line">
-                <span class="output">> +1 (438) 869-6012</span>
+                <span class="output"
+                  >> <span data-value="contact-phone"></span
+                ></span>
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
