@@ -83,15 +83,6 @@ function initializeValues() {
       element.innerHTML = CALCULATED_VALUES[key];
     });
   });
-
-  console.log('✓ IMPULSE Configuration loaded successfully');
-  console.log(
-    `✓ Available slots: ${IMPULSE_CONFIG.availableSlots}/${IMPULSE_CONFIG.totalSlots}`
-  );
-  console.log(
-    `✓ Labs capacity: ${IMPULSE_CONFIG.labsOccupied}/${IMPULSE_CONFIG.labsTotal}`
-  );
-  console.log(`✓ Waiting list: ${IMPULSE_CONFIG.waitingList} projects`);
 }
 
 // ============================================================================
@@ -210,7 +201,6 @@ function closeContactForm() {
     if (form) form.reset();
     if (successMessage) successMessage.classList.remove('show');
 
-    // Hide all validation errors
     hideAllValidationErrors();
   }
 }

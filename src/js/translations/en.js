@@ -2,10 +2,10 @@ const en = {
   title: 'IMPULSE // INNOVATION CATALYST',
   hero: {
     prompt: 'innovation@impulse:~$',
-    command: './execute --breakthrough-systems',
+    command: './execute --systems',
     output1: 'Building systems that actually work.',
     output2: 'The kind of engineering that keeps systems running at 3AM.',
-    available_slots: 'Currently: 2 project slots still open for 2024',
+    available_slots: 'Currently: 2 project slots still open for 2025',
   },
   manifesto: {
     label: '01 // Manifesto',
@@ -17,7 +17,7 @@ const en = {
       "technology doesn't just serve humanity—it amplifies human potential exponentially",
   },
   selection: {
-    label: '02 // Selection',
+    label: '05 // Selection',
     title: 'We choose 8 innovations per year. Maximum.',
     description:
       "Not because we can't handle more. Because breakthrough innovation requires our complete focus. Each project gets the full weight of our expertise, our embedded engineering prowess, and our obsessive attention to technical excellence.",
@@ -47,10 +47,10 @@ const en = {
     comment: '// Core Systems',
   },
   labs: {
-    label: '05 // Innovation Labs',
+    label: '02 // Innovation Labs',
     title: 'Current Active Projects',
-    status: '3 SLOTS REMAINING',
-    waiting: 'or join waiting-list',
+    status: '2 SLOTS REMAINING',
+    waiting: 'or waiting-list',
     projects: {
       agtech: {
         category: 'AGTECH',

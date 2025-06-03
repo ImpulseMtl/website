@@ -2,8 +2,8 @@ const fr = {
   title: "IMPULSE // CATALYSEUR D'INNOVATION",
   hero: {
     prompt: 'innovation@impulse:~$',
-    command: './execute --systemes-révolutionnaires',
-    output1: 'Construire des systèmes qui fonctionnent vraiment.',
+    command: './execute --systemes',
+    output1: 'Construire des systèmes résilient.',
     output2:
       "Le type d'ingénierie qui maintient les systèmes en marche à 3h du matin.",
     available_slots:
@@ -19,7 +19,7 @@ const fr = {
       "la technologie ne se contente pas de servir l'humanité—elle amplifie le potentiel humain de manière exponentielle",
   },
   selection: {
-    label: '02 // Sélection',
+    label: '05 // Sélection',
     title: 'Nous choisissons 8 innovations par an. Maximum.',
     description:
       "Parce que l'innovation révolutionnaire nécessite toute notre concentration. Chaque projet bénéficie de tout le poids de notre expertise, de notre maîtrise de l'ingénierie embarquée, et de notre attention obsessionnelle à l'excellence technique.",
@@ -49,7 +49,7 @@ const fr = {
     comment: '// Systèmes Centraux',
   },
   labs: {
-    label: "05 // Laboratoires d'Innovation",
+    label: "02 // Laboratoires d'Innovation",
     title: 'Projets Actifs Actuels',
     status: '2 CRÉNEAUX RESTANTS',
     waiting: "ou liste d'attente",

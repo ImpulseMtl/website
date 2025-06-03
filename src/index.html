@@ -54,6 +54,70 @@
       </div>
     </section>
 
+    <!-- Innovation Labs -->
+    <section class="labs">
+      <div class="section-grid">
+        <div class="section-label">{labs.label}</div>
+        <div>
+          <div class="labs-header">
+            <h2 class="labs-title">{labs.title}</h2>
+            <div class="labs-status">
+              <span class="status-text">{labs.status}</span>
+              <span class="waiting-list">{labs.waiting}</span>
+            </div>
+          </div>
+
+          <div class="lab-grid">
+            <div class="lab-item">
+              <div class="lab-category">{labs.projects.agtech.category}</div>
+              <div class="lab-title">{labs.projects.agtech.title}</div>
+              <div class="lab-tech">{labs.projects.agtech.tech}</div>
+              <div class="lab-desc">{labs.projects.agtech.desc}</div>
+            </div>
+
+            <div class="lab-item">
+              <div class="lab-category">
+                {labs.projects.environmental.category}
+              </div>
+              <div class="lab-title">{labs.projects.environmental.title}</div>
+              <div class="lab-tech">{labs.projects.environmental.tech}</div>
+              <div class="lab-desc">{labs.projects.environmental.desc}</div>
+            </div>
+
+            <div class="lab-item">
+              <div class="lab-category">
+                {labs.projects.automotive.category}
+              </div>
+              <div class="lab-title">{labs.projects.automotive.title}</div>
+              <div class="lab-tech">{labs.projects.automotive.tech}</div>
+              <div class="lab-desc">{labs.projects.automotive.desc}</div>
+            </div>
+
+            <div class="lab-item">
+              <div class="lab-category">{labs.projects.ai.category}</div>
+              <div class="lab-title">{labs.projects.ai.title}</div>
+              <div class="lab-tech">{labs.projects.ai.tech}</div>
+              <div class="lab-desc">{labs.projects.ai.desc}</div>
+            </div>
+
+            <div class="lab-item">
+              <div class="lab-category">{labs.projects.social.category}</div>
+              <div class="lab-title">{labs.projects.social.title}</div>
+              <div class="lab-tech">{labs.projects.social.tech}</div>
+              <div class="lab-desc">{labs.projects.social.desc}</div>
+            </div>
+
+            <div class="lab-item">
+              <div class="lab-category">{labs.projects.fintech.category}</div>
+              <div class="lab-title">{labs.projects.fintech.title}</div>
+              <div class="lab-tech">{labs.projects.fintech.tech}</div>
+              <div class="lab-desc">{labs.projects.fintech.desc}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Selection Process -->
     <section class="selection">
       <div class="section-grid">
@@ -106,9 +170,9 @@
     </section>
 
     <!-- Technical Stack -->
-    <section class="tech-stack">
+    <section class="tech-stack" id="tech-stack">
       <div class="section-grid">
-        <div class="section-label">{stack.label}</div>
+        <div class="section-label">03 // Stack</div>
         <div>
           <div class="code-block">
             <div class="code-header">
@@ -176,82 +240,73 @@
             </div>
             <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
             <div class="code-line"></div>
-            <div class="code-line">
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">fn</span>
-              <span class="string">deploy_innovation</span>(&self,
-              impossible_idea: <span class="keyword">String</span>) ->
-              <span class="keyword">Result</span>&lt;<span class="keyword"
-                >String</span
-              >, <span class="keyword">String</span>&gt; {
-            </div>
-            <div class="code-line">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.make_it_work(impossible_idea)
-            </div>
-            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
             <div class="code-line">}</div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Innovation Labs -->
-    <section class="labs">
-      <div class="section-grid">
-        <div class="section-label">{labs.label}</div>
-        <div>
-          <div class="labs-header">
-            <h2 class="labs-title">{labs.title}</h2>
-            <div class="labs-status">
-              <span class="status-text">{labs.status}</span>
-              <span class="waiting-list">{labs.waiting}</span>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">hardware_manifest.toml</span>
+              <span class="comment">// Physical Systems</span>
             </div>
-          </div>
-
-          <div class="lab-grid">
-            <div class="lab-item">
-              <div class="lab-category">{labs.projects.agtech.category}</div>
-              <div class="lab-title">{labs.projects.agtech.title}</div>
-              <div class="lab-tech">{labs.projects.agtech.tech}</div>
-              <div class="lab-desc">{labs.projects.agtech.desc}</div>
+            <div class="code-line">
+              <span class="comment"># Custom Silicon & FPGA</span>
             </div>
-
-            <div class="lab-item">
-              <div class="lab-category">
-                {labs.projects.environmental.category}
-              </div>
-              <div class="lab-title">{labs.projects.environmental.title}</div>
-              <div class="lab-tech">{labs.projects.environmental.tech}</div>
-              <div class="lab-desc">{labs.projects.environmental.desc}</div>
+            <div class="code-line">
+              fpga = [<span class="string">"Xilinx Zynq"</span>,
+              <span class="string">"Intel Altera"</span>,
+              <span class="string">"Lattice"</span>]
             </div>
-
-            <div class="lab-item">
-              <div class="lab-category">
-                {labs.projects.automotive.category}
-              </div>
-              <div class="lab-title">{labs.projects.automotive.title}</div>
-              <div class="lab-tech">{labs.projects.automotive.tech}</div>
-              <div class="lab-desc">{labs.projects.automotive.desc}</div>
+            <div class="code-line">
+              asic =
+              <span class="string">"Custom silicon for edge inference"</span>
             </div>
-
-            <div class="lab-item">
-              <div class="lab-category">{labs.projects.ai.category}</div>
-              <div class="lab-title">{labs.projects.ai.title}</div>
-              <div class="lab-tech">{labs.projects.ai.tech}</div>
-              <div class="lab-desc">{labs.projects.ai.desc}</div>
+            <div class="code-line"></div>
+            <div class="code-line">
+              <span class="comment"># Embedded Platforms</span>
             </div>
-
-            <div class="lab-item">
-              <div class="lab-category">{labs.projects.social.category}</div>
-              <div class="lab-title">{labs.projects.social.title}</div>
-              <div class="lab-tech">{labs.projects.social.tech}</div>
-              <div class="lab-desc">{labs.projects.social.desc}</div>
+            <div class="code-line">
+              mcu = [<span class="string">"ARM Cortex-M"</span>,
+              <span class="string">"ESP32"</span>,
+              <span class="string">"STM32"</span>,
+              <span class="string">"nRF52"</span>]
             </div>
-
-            <div class="lab-item">
-              <div class="lab-category">{labs.projects.fintech.category}</div>
-              <div class="lab-title">{labs.projects.fintech.title}</div>
-              <div class="lab-tech">{labs.projects.fintech.tech}</div>
-              <div class="lab-desc">{labs.projects.fintech.desc}</div>
+            <div class="code-line">
+              sbc = [<span class="string">"Raspberry Pi"</span>,
+              <span class="string">"NVIDIA Jetson"</span>,
+              <span class="string">"BeagleBone"</span>]
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+              <span class="comment"># Communication & Sensors</span>
+            </div>
+            <div class="code-line">
+              rf = [<span class="string">"LoRaWAN"</span>,
+              <span class="string">"Zigbee"</span>,
+              <span class="string">"WiFi 6E"</span>,
+              <span class="string">"5G mmWave"</span>]
+            </div>
+            <div class="code-line">
+              sensors = [<span class="string">"LiDAR"</span>,
+              <span class="string">"IMU"</span>,
+              <span class="string">"Environmental"</span>,
+              <span class="string">"Computer Vision"</span>]
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+              <span class="comment"># PCB Design & Manufacturing</span>
+            </div>
+            <div class="code-line">
+              pcb_layers = <span class="number">1-16</span>
+              <span class="comment"># layer complexity</span>
+            </div>
+            <div class="code-line">
+              design_rules =
+              <span class="string">"0.1mm minimum via size"</span>
+            </div>
+            <div class="code-line">
+              manufacturing = [<span class="string">"SMT"</span>,
+              <span class="string">"HDI"</span>,
+              <span class="string">"Flex-Rigid"</span>]
             </div>
           </div>
         </div>
