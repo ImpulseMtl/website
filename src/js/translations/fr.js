@@ -81,8 +81,7 @@ const fr = {
       endpoints: 'Points de terminaison de candidature :',
       email: 'innovation@impulsemlt.ca',
       compose: 'composer --nouveau-message',
-      comment1:
-        '# Cliquez ci-dessus pour lancer le canal de communication sécurisé',
+      comment1: '# Cliquez ci-dessus pour envoyer votre proposition de projet',
       comment2:
         "# Note : Incluez les spécifications techniques, exigences d'échelle,",
       comment3: '# et pourquoi ce projet nécessite notre expertise spécifique',
@@ -118,7 +117,15 @@ const fr = {
     },
     buttons: {
       cancel: 'Annuler',
-      submit: './envoyer --sécurisé',
+      submit: './envoyer',
     },
+  },
+  nda: {
+    title: 'divulgation_projet.sh',
+    headline: 'Accès Projet : NDA Requis',
+    message1: 'Tous les projets actifs sont protégés par des accords de non-divulgation.',
+    message2: 'Nous serions ravis de discuter des détails du projet avec des partenaires qualifiés.',
+    action_text: 'Prendre Contact',
+    footer: '# Protocoles de confidentialité actifs',
   },
 };

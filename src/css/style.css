@@ -439,6 +439,7 @@ body {
 .lab-item:hover {
   border-color: #ff4500;
   background: #1a1a1a;
+  transform: translateY(-2px);
 }
 
 .lab-item::after {
@@ -753,6 +754,72 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* NDA Modal Styles */
+.nda-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nda-modal.active {
+  display: flex;
+}
+
+.nda-modal-terminal {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 500px;
+  animation: slideIn 0.5s ease-out;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nda-body {
+  padding: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.nda-content {
+  text-align: center;
+}
+
+.nda-headline {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff4500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nda-message {
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.nda-actions {
+  margin: 2rem 0;
+}
+
+.nda-footer {
+  color: #666;
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
 
 /* Interactive clickable elements */
 .clickable-element {

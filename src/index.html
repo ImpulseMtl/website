@@ -331,6 +331,34 @@
       </div>
     </section>
 
+    <!-- NDA Modal -->
+    <div class="nda-modal" id="ndaModal">
+      <div class="nda-modal-terminal">
+        <div class="form-header">
+          <div class="form-title">
+            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-yellow"></div>
+            <div class="terminal-dot dot-green"></div>
+            <span>{nda.title}</span>
+          </div>
+          <button class="close-btn" onclick="closeNdaModal()"></button>
+        </div>
+        <div class="nda-body">
+          <div class="nda-content">
+            <div class="nda-headline">{nda.headline}</div>
+            <div class="nda-message">{nda.message1}</div>
+            <div class="nda-message">{nda.message2}</div>
+            <div class="nda-actions">
+              <button class="btn btn-primary" onclick="openContactFromNda()">
+                <span>{nda.action_text}</span>
+              </button>
+            </div>
+            <div class="nda-footer">{nda.footer}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Form Modal -->
     <div class="contact-modal" id="contactModal">
       <div class="contact-form-terminal">

@@ -80,12 +80,10 @@ const en = {
       email: 'innovation@impulsemtl.ca',
       compose: 'compose --new-message',
       comment1: '# Click above to send your project proposal',
-      comment2: '# Note: Include technical specs, scale requirements,',
-      comment3: '# and why this project requires our specific expertise',
     },
   },
   form: {
-    title: 'secure_message.send',
+    title: 'message.send',
     success: '✓ Message transmitted successfully!',
     success_desc:
       'Our engineering team will evaluate your project within 48 hours.',
@@ -114,7 +112,15 @@ const en = {
     },
     buttons: {
       cancel: 'Cancel',
-      submit: './send --secure',
+      submit: './send',
     },
+  },
+  nda: {
+    title: 'project_disclosure.sh',
+    headline: 'Project Access: NDA Required',
+    message1: 'All active projects are protected under non-disclosure agreements.',
+    message2: 'We would be pleased to discuss project details with qualified partners.',
+    action_text: 'Get In Touch',
+    footer: '# Confidentiality protocols active',
   },
 };

@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(typeWriter, 1000);
   }
 
-  // Glitch effect on lab items
+  // Glitch effect and click handler for lab items
   document.querySelectorAll('.lab-item').forEach((item) => {
     item.addEventListener('mouseenter', () => {
       const title = item.querySelector('.lab-title');
@@ -123,6 +123,11 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         title.style.textShadow = 'none';
       }, 350);
+    });
+
+    // Add click handler to show NDA modal
+    item.addEventListener('click', () => {
+      openNdaModal();
     });
   });
 });
@@ -353,7 +358,61 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// ============================================================================
+// NDA MODAL FUNCTIONALITY
+// ============================================================================
+
+// NDA modal functions
+function openNdaModal() {
+  const modal = document.getElementById('ndaModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeNdaModal() {
+  const modal = document.getElementById('ndaModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function openContactFromNda() {
+  closeNdaModal();
+  setTimeout(() => {
+    openContactForm();
+  }, 300);
+}
+
+// Event listeners for NDA modal
+document.addEventListener('DOMContentLoaded', function () {
+  // Close NDA modal on escape key
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      const ndaModal = document.getElementById('ndaModal');
+      if (ndaModal && ndaModal.classList.contains('active')) {
+        closeNdaModal();
+      }
+    }
+  });
+
+  // Close NDA modal on outside click
+  const ndaModal = document.getElementById('ndaModal');
+  if (ndaModal) {
+    ndaModal.addEventListener('click', function (event) {
+      if (event.target === ndaModal) {
+        closeNdaModal();
+      }
+    });
+  }
+});
+
 window.openContactForm = openContactForm;
 window.closeContactForm = closeContactForm;
 window.sendMessage = sendMessage;
 window.handleFormSubmit = handleFormSubmit;
+window.openNdaModal = openNdaModal;
+window.closeNdaModal = closeNdaModal;
+window.openContactFromNda = openContactFromNda;
