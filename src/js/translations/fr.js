@@ -3,20 +3,18 @@ const fr = {
   hero: {
     prompt: 'innovation@impulse:~$',
     command: './execute --systemes',
-    output1: 'Construire des systèmes résilient.',
-    output2:
-      "Le type d'ingénierie qui maintient les systèmes en marche à 3h du matin.",
     available_slots:
-      'Actuellement : 2 créneaux de projet encore ouverts pour 2025',
+      "Actuellement : 2 créneaux d'innovations encore ouvertes pour 2025",
   },
+
   manifesto: {
     label: '01 // Manifeste',
-    text1: "Pendant que d'autres débattent du futur,",
-    text2: 'nous le construisons',
-    text3:
-      '. Chaque système, chaque réseau distribué, chaque déploiement IoT est un pas vers un monde où',
+    text1:
+      "La plupart des projets d'innovation échouent car ils privilégient la complexité sur la fiabilité.",
+    text2: 'Nous construisons des systèmes qui fonctionnent',
+    text3: '. À grande échelle. Sous pression. Quand ça compte.',
     text4:
-      "la technologie ne se contente pas de servir l'humanité—elle amplifie le potentiel humain de manière exponentielle",
+      "L'excellence technique ne consiste pas à utiliser le dernier framework—mais à résoudre de vrais problèmes avec des solutions durables.",
   },
 
   labs: {
@@ -35,13 +33,13 @@ const fr = {
         category: 'ENVIRONNEMENTAL',
         title: "Réseaux d'Intelligence Aquatique",
         tech: 'Capteur Aquatique • Détection Edge • Analytiques Temps Réel',
-        desc: 'Systèmes avancés de détection de charge utile pour intelligence environnementale complète',
+        desc: "Systèmes avancés de détection pour de l'intelligence environnementale complète",
       },
       automotive: {
         category: 'AUTOMOBILE',
-        title: 'Diagnostics de Véhicules Autonomes',
+        title: 'Diagnostics automatique de Véhicules',
         tech: 'Mobile Natif • Vision par Ordinateur • Traitement Temps Réel',
-        desc: 'Systèmes de scanning haute précision pour validation et optimisation des performances de véhicules autonomes',
+        desc: 'Systèmes de scanning haute précision pour validation de véhicules',
       },
       ai: {
         category: 'SYSTÈMES IA',
@@ -51,13 +49,13 @@ const fr = {
       },
       social: {
         category: 'TECH SOCIALE',
-        title: "Architecture de Réseaux d'Influence",
+        title: "Réseaux d'Influence",
         tech: 'Analytiques de Graphes • Modélisation Comportementale • Traitement Temps Réel',
         desc: "Systèmes de plateforme avancés pour l'analyse des modèles d'influence et l'optimisation des effets de réseau",
       },
       fintech: {
         category: 'FINTECH',
-        title: 'Infrastructure de Tests en Essaim',
+        title: 'Infrastructure de Tests',
         tech: 'Docker Swarm • Orchestration • Analytiques Prédictives',
         desc: 'Environnements de test conteneurisés pour validation de modèles de prédiction à grande échelle et benchmarking de performance',
       },
@@ -74,7 +72,6 @@ const fr = {
       title: 'candidature_projet.sh',
       command1: './candidature --soumettre-projet',
       output1: 'Initialisation du protocole de candidature...',
-      warning: 'ATTENTION : Seuls les projets exceptionnels sont considérés',
       command2: 'curl -X POST /evaluer-projet',
       headers: {
         complexity: '--header "Complexité-Technique: Maximum"',
@@ -82,8 +79,7 @@ const fr = {
         scale: '--header "Ambition-Échelle: Mondiale"',
       },
       endpoints: 'Points de terminaison de candidature :',
-      email: 'innovation@impulse.systems',
-      phone: '+1 (555) IMPULSE',
+      email: 'innovation@impulsemlt.ca',
       compose: 'composer --nouveau-message',
       comment1:
         '# Cliquez ci-dessus pour lancer le canal de communication sécurisé',

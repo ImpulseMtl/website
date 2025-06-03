@@ -3,18 +3,16 @@ const en = {
   hero: {
     prompt: 'innovation@impulse:~$',
     command: './execute --systems',
-    output1: 'Building systems that actually work.',
-    output2: 'The kind of engineering that keeps systems running at 3AM.',
-    available_slots: 'Currently: 2 project slots still open for 2025',
+    available_slots: 'Currently: 2 innovations slots still open for 2025',
   },
   manifesto: {
     label: '01 // Manifesto',
-    text1: 'While others debate the future,',
-    text2: 'we build it',
-    text3:
-      '. Every system, every distributed network, every IoT deployment is a step toward a world where',
+    text1:
+      'Most innovation projects fail because they prioritize complexity over reliability.',
+    text2: 'We build systems that work',
+    text3: '. At scale. Under pressure. When it matters.',
     text4:
-      "technology doesn't just serve humanity—it amplifies human potential exponentially",
+      "Technical excellence isn't about using the latest framework—it's about solving real problems with sustainable solutions.",
   },
 
   labs: {
@@ -37,9 +35,9 @@ const en = {
       },
       automotive: {
         category: 'AUTOMOTIVE',
-        title: 'Autonomous Vehicle Diagnostics',
+        title: ' Vehicle Diagnostics',
         tech: 'Mobile native • Computer Vision • Real-time Processing',
-        desc: 'High-precision scanning systems for autonomous vehicle validation and performance optimization',
+        desc: 'High-precision scanning systems for  vehicle validation',
       },
       ai: {
         category: 'AI SYSTEMS',
@@ -55,7 +53,7 @@ const en = {
       },
       fintech: {
         category: 'FINTECH',
-        title: 'Swarm Testing Infrastructure',
+        title: 'Testing Infrastructure',
         tech: 'Docker Swarm • Orchestration • Predictive Analytics',
         desc: 'Containerized test environments for large-scale prediction model validation and performance benchmarking',
       },
@@ -72,7 +70,6 @@ const en = {
       title: 'project_application.sh',
       command1: './application --submit-project',
       output1: 'Initializing application protocol...',
-      warning: 'WARNING: Only exceptional projects considered',
       command2: 'curl -X POST /evaluate-project',
       headers: {
         complexity: '--header "Technical-Complexity: Maximum"',
@@ -80,10 +77,9 @@ const en = {
         scale: '--header "Scale-Ambition: Global"',
       },
       endpoints: 'Application endpoints:',
-      email: 'innovation@impulse.systems',
-      phone: '+1 (555) IMPULSE',
+      email: 'innovation@impulsemtl.ca',
       compose: 'compose --new-message',
-      comment1: '# Click above to launch secure communication channel',
+      comment1: '# Click above to send your project proposal',
       comment2: '# Note: Include technical specs, scale requirements,',
       comment3: '# and why this project requires our specific expertise',
     },
