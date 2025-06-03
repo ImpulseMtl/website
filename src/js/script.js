@@ -299,8 +299,9 @@ function handleFormSubmit() {
     return; // Stop if validation fails
   }
 
-  // Show loading state
+  // Show loading state with enhanced animation
   form.classList.add('loading');
+  submitBtn.classList.add('transmitting');
   submitText.innerHTML = '<span class="spinner"></span>Transmitting...';
 
   const data = {
@@ -317,6 +318,7 @@ function handleFormSubmit() {
 
     // Show success message
     form.classList.remove('loading');
+    submitBtn.classList.remove('transmitting');
     submitText.innerHTML = './send --secure';
     successMessage.classList.add('show');
     hideAllValidationErrors();
