@@ -17,7 +17,7 @@ const en = {
       "technology doesn't just serve humanity—it amplifies human potential exponentially",
   },
   selection: {
-    label: '05 // Selection',
+    label: '03 // Selection',
     title: 'We choose 8 innovations per year. Maximum.',
     description:
       "Not because we can't handle more. Because breakthrough innovation requires our complete focus. Each project gets the full weight of our expertise, our embedded engineering prowess, and our obsessive attention to technical excellence.",
@@ -42,7 +42,7 @@ const en = {
     status: 'ACCEPTING NEW PROJECTS',
   },
   stack: {
-    label: '03 // Stack',
+    label: '04 // Stack',
     title: 'innovation_engine.rs',
     comment: '// Core Systems',
   },
@@ -91,7 +91,7 @@ const en = {
     },
   },
   contact: {
-    label: '06 // Connect',
+    label: '05 // Connect',
     terminal: {
       title: 'project_application.sh',
       command1: './application --submit-project',

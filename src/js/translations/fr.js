@@ -19,7 +19,7 @@ const fr = {
       "la technologie ne se contente pas de servir l'humanité—elle amplifie le potentiel humain de manière exponentielle",
   },
   selection: {
-    label: '05 // Sélection',
+    label: '03 // Sélection',
     title: 'Nous choisissons 8 innovations par an. Maximum.',
     description:
       "Parce que l'innovation révolutionnaire nécessite toute notre concentration. Chaque projet bénéficie de tout le poids de notre expertise, de notre maîtrise de l'ingénierie embarquée, et de notre attention obsessionnelle à l'excellence technique.",
@@ -44,7 +44,7 @@ const fr = {
     status: 'ACCEPTONS DE NOUVEAUX PROJETS',
   },
   stack: {
-    label: '03 // Stack',
+    label: '04 // Stack',
     title: 'moteur_innovation.rs',
     comment: '// Systèmes Centraux',
   },
@@ -93,7 +93,7 @@ const fr = {
     },
   },
   contact: {
-    label: '06 // Connexion',
+    label: '05 // Connexion',
     terminal: {
       title: 'candidature_projet.sh',
       command1: './candidature --soumettre-projet',
