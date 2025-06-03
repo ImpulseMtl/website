@@ -18,7 +18,7 @@ const en = {
   },
   selection: {
     label: '02 // Selection',
-    title: 'We choose 8 per year. Maximum.',
+    title: 'We choose 8 innovations per year. Maximum.',
     description:
       "Not because we can't handle more. Because breakthrough innovation requires our complete focus. Each project gets the full weight of our expertise, our embedded engineering prowess, and our obsessive attention to technical excellence.",
     criteria: {

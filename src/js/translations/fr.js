@@ -20,9 +20,9 @@ const fr = {
   },
   selection: {
     label: '02 // Sélection',
-    title: 'Nous choisissons 8 par an. Maximum.',
+    title: 'Nous choisissons 8 innovations par an. Maximum.',
     description:
-      "Non pas parce que nous ne pouvons pas en gérer plus. Parce que l'innovation révolutionnaire nécessite toute notre concentration. Chaque projet bénéficie de tout le poids de notre expertise, de notre maîtrise de l'ingénierie embarquée, et de notre attention obsessionnelle à l'excellence technique.",
+      "Parce que l'innovation révolutionnaire nécessite toute notre concentration. Chaque projet bénéficie de tout le poids de notre expertise, de notre maîtrise de l'ingénierie embarquée, et de notre attention obsessionnelle à l'excellence technique.",
     criteria: {
       technical: {
         title: 'Complexité Technique',
@@ -51,8 +51,8 @@ const fr = {
   labs: {
     label: "05 // Laboratoires d'Innovation",
     title: 'Projets Actifs Actuels',
-    status: '3 CRÉNEAUX RESTANTS',
-    waiting: "ou rejoindre la liste d'attente",
+    status: '2 CRÉNEAUX RESTANTS',
+    waiting: "ou liste d'attente",
     projects: {
       agtech: {
         category: 'AGTECH',
