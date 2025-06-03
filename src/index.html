@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="title">IMPULSE // INNOVATION CATALYST</title>
+    <title>{title}</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,39 +33,23 @@
 
       <div class="hero-output">
         >
-        <span data-i18n="hero.output1"
-          >Building systems that actually work.</span
-        ><br />
+        <span>{hero.output1}</span><br />
         >
-        <span data-i18n="hero.output2"
-          >The kind of engineering that keeps systems running at 3AM.</span
-        ><br />
+        <span>{hero.output2}</span><br />
         >
-        <span class="highlight" data-i18n="hero.available_slots"
-          >Currently: 2 project slots still open for 2024</span
-        >
+        <span class="highlight">{hero.available_slots}</span>
       </div>
     </section>
 
     <!-- Manifesto Section -->
     <section class="manifesto">
       <div class="section-grid">
-        <div class="section-label" data-i18n="manifesto.label">
-          01 // Manifesto
-        </div>
+        <div class="section-label">{manifesto.label}</div>
         <div class="manifesto-text">
-          <span data-i18n="manifesto.text1"
-            >While others debate the future,</span
-          >
-          <span class="highlight" data-i18n="manifesto.text2">we build it</span
-          ><span data-i18n="manifesto.text3"
-            >. Every system, every distributed network, every IoT deployment is
-            a step toward a world where</span
-          >
-          <span class="highlight" data-i18n="manifesto.text4"
-            >technology doesn't just serve humanity—it amplifies human potential
-            exponentially</span
-          >.
+          <span>{manifesto.text1}</span>
+          <span class="highlight">{manifesto.text2}</span
+          ><span>{manifesto.text3}</span>
+          <span class="highlight">{manifesto.text4}</span>.
         </div>
       </div>
     </section>
@@ -73,66 +57,40 @@
     <!-- Selection Process -->
     <section class="selection">
       <div class="section-grid">
-        <div class="section-label" data-i18n="selection.label">
-          02 // Selection
-        </div>
+        <div class="section-label">{selection.label}</div>
         <div>
           <div class="selection-content">
-            <h2 class="selection-title" data-i18n="selection.title">
-              We choose 8 per year. Maximum.
-            </h2>
-            <p class="selection-desc" data-i18n="selection.description">
-              Not because we can't handle more. Because breakthrough innovation
-              requires our complete focus. Each project gets the full weight of
-              our expertise, our embedded engineering prowess, and our obsessive
-              attention to technical excellence.
-            </p>
+            <h2 class="selection-title">{selection.title}</h2>
+            <p class="selection-desc">{selection.description}</p>
           </div>
 
           <div class="selection-criteria">
             <div class="criteria-item">
               <div class="criteria-check">✓</div>
               <div class="criteria-text">
-                <strong data-i18n="selection.criteria.technical.title"
-                  >Technical Complexity</strong
-                ><br />
-                <span data-i18n="selection.criteria.technical.desc"
-                  >Problems that would make other teams walk away</span
-                >
+                <strong>{selection.criteria.technical.title}</strong><br />
+                <span>{selection.criteria.technical.desc}</span>
               </div>
             </div>
             <div class="criteria-item">
               <div class="criteria-check">✓</div>
               <div class="criteria-text">
-                <strong data-i18n="selection.criteria.impact.title"
-                  >Industry Impact</strong
-                ><br />
-                <span data-i18n="selection.criteria.impact.desc"
-                  >Solutions that reshape entire sectors</span
-                >
+                <strong>{selection.criteria.impact.title}</strong><br />
+                <span>{selection.criteria.impact.desc}</span>
               </div>
             </div>
             <div class="criteria-item">
               <div class="criteria-check">✓</div>
               <div class="criteria-text">
-                <strong data-i18n="selection.criteria.scale.title"
-                  >Scale Ambition</strong
-                ><br />
-                <span data-i18n="selection.criteria.scale.desc"
-                  >Systems designed for millions, not hundreds</span
-                >
+                <strong>{selection.criteria.scale.title}</strong><br />
+                <span>{selection.criteria.scale.desc}</span>
               </div>
             </div>
             <div class="criteria-item">
               <div class="criteria-check">✓</div>
               <div class="criteria-text">
-                <strong data-i18n="selection.criteria.leadership.title"
-                  >Technical Leadership</strong
-                ><br />
-                <span data-i18n="selection.criteria.leadership.desc"
-                  >Teams that understand the magnitude of what we're
-                  building</span
-                >
+                <strong>{selection.criteria.leadership.title}</strong><br />
+                <span>{selection.criteria.leadership.desc}</span>
               </div>
             </div>
           </div>
@@ -140,7 +98,7 @@
           <div class="availability-status">
             <div class="status-indicator">
               <div class="status-light"></div>
-              <span data-i18n="selection.status">ACCEPTING NEW PROJECTS</span>
+              <span>{selection.status}</span>
             </div>
           </div>
         </div>
@@ -150,16 +108,12 @@
     <!-- Technical Stack -->
     <section class="tech-stack">
       <div class="section-grid">
-        <div class="section-label" data-i18n="stack.label">03 // Stack</div>
+        <div class="section-label">{stack.label}</div>
         <div>
           <div class="code-block">
             <div class="code-header">
-              <span class="code-title" data-i18n="stack.title"
-                >innovation_engine.rs</span
-              >
-              <span class="comment" data-i18n="stack.comment"
-                >// Core Systems</span
-              >
+              <span class="code-title">{stack.title}</span>
+              <span class="comment">{stack.comment}</span>
             </div>
             <div class="code-line">
               <span class="keyword">struct</span>
@@ -243,143 +197,61 @@
     <!-- Innovation Labs -->
     <section class="labs">
       <div class="section-grid">
-        <div class="section-label" data-i18n="labs.label">
-          05 // Innovation Labs
-        </div>
+        <div class="section-label">{labs.label}</div>
         <div>
           <div class="labs-header">
-            <h2 class="labs-title" data-i18n="labs.title">
-              Current Active Projects
-            </h2>
+            <h2 class="labs-title">{labs.title}</h2>
             <div class="labs-status">
-              <span class="status-text" data-i18n="labs.status"
-                >3 SLOTS REMAINING</span
-              >
-              <span class="waiting-list" data-i18n="labs.waiting"
-                >or join waiting-list</span
-              >
+              <span class="status-text">{labs.status}</span>
+              <span class="waiting-list">{labs.waiting}</span>
             </div>
           </div>
 
           <div class="lab-grid">
             <div class="lab-item">
-              <div
-                class="lab-category"
-                data-i18n="labs.projects.agtech.category"
-              >
-                AGTECH
-              </div>
-              <div class="lab-title" data-i18n="labs.projects.agtech.title">
-                Aerial Reforestation Systems
-              </div>
-              <div class="lab-tech" data-i18n="labs.projects.agtech.tech">
-                UAV Payload • Precision Dispensing • GPS Targeting
-              </div>
-              <div class="lab-desc" data-i18n="labs.projects.agtech.desc">
-                Autonomous drone payload systems for targeted fertilizer
-                deployment across 50,000+ reforestation sites
-              </div>
+              <div class="lab-category">{labs.projects.agtech.category}</div>
+              <div class="lab-title">{labs.projects.agtech.title}</div>
+              <div class="lab-tech">{labs.projects.agtech.tech}</div>
+              <div class="lab-desc">{labs.projects.agtech.desc}</div>
             </div>
 
             <div class="lab-item">
-              <div
-                class="lab-category"
-                data-i18n="labs.projects.environmental.category"
-              >
-                ENVIRONMENTAL
+              <div class="lab-category">
+                {labs.projects.environmental.category}
               </div>
-              <div
-                class="lab-title"
-                data-i18n="labs.projects.environmental.title"
-              >
-                Aquatic Intelligence Networks
-              </div>
-              <div
-                class="lab-tech"
-                data-i18n="labs.projects.environmental.tech"
-              >
-                Aquatic sensor • Edge Detection • Real-time Analytics
-              </div>
-              <div
-                class="lab-desc"
-                data-i18n="labs.projects.environmental.desc"
-              >
-                Advanced payload detection systems for comprehensive
-                environmental intelligence
-              </div>
+              <div class="lab-title">{labs.projects.environmental.title}</div>
+              <div class="lab-tech">{labs.projects.environmental.tech}</div>
+              <div class="lab-desc">{labs.projects.environmental.desc}</div>
             </div>
 
             <div class="lab-item">
-              <div
-                class="lab-category"
-                data-i18n="labs.projects.automotive.category"
-              >
-                AUTOMOTIVE
+              <div class="lab-category">
+                {labs.projects.automotive.category}
               </div>
-              <div class="lab-title" data-i18n="labs.projects.automotive.title">
-                Autonomous Vehicle Diagnostics
-              </div>
-              <div class="lab-tech" data-i18n="labs.projects.automotive.tech">
-                Mobile native • Computer Vision • Real-time Processing
-              </div>
-              <div class="lab-desc" data-i18n="labs.projects.automotive.desc">
-                High-precision scanning systems for autonomous vehicle
-                validation and performance optimization
-              </div>
+              <div class="lab-title">{labs.projects.automotive.title}</div>
+              <div class="lab-tech">{labs.projects.automotive.tech}</div>
+              <div class="lab-desc">{labs.projects.automotive.desc}</div>
             </div>
 
             <div class="lab-item">
-              <div class="lab-category" data-i18n="labs.projects.ai.category">
-                AI SYSTEMS
-              </div>
-              <div class="lab-title" data-i18n="labs.projects.ai.title">
-                Talent Intelligence Platform
-              </div>
-              <div class="lab-tech" data-i18n="labs.projects.ai.tech">
-                NLP • Gap Analysis • Predictive Modeling
-              </div>
-              <div class="lab-desc" data-i18n="labs.projects.ai.desc">
-                AI-driven recruitment analytics identifying skill gaps and
-                optimization opportunities across talent pipelines
-              </div>
+              <div class="lab-category">{labs.projects.ai.category}</div>
+              <div class="lab-title">{labs.projects.ai.title}</div>
+              <div class="lab-tech">{labs.projects.ai.tech}</div>
+              <div class="lab-desc">{labs.projects.ai.desc}</div>
             </div>
 
             <div class="lab-item">
-              <div
-                class="lab-category"
-                data-i18n="labs.projects.social.category"
-              >
-                SOCIAL TECH
-              </div>
-              <div class="lab-title" data-i18n="labs.projects.social.title">
-                Influence Network Architecture
-              </div>
-              <div class="lab-tech" data-i18n="labs.projects.social.tech">
-                Graph Analytics • Behavioral Modeling • Real-time Processing
-              </div>
-              <div class="lab-desc" data-i18n="labs.projects.social.desc">
-                Advanced platform systems for influence pattern analysis and
-                network effect optimization
-              </div>
+              <div class="lab-category">{labs.projects.social.category}</div>
+              <div class="lab-title">{labs.projects.social.title}</div>
+              <div class="lab-tech">{labs.projects.social.tech}</div>
+              <div class="lab-desc">{labs.projects.social.desc}</div>
             </div>
 
             <div class="lab-item">
-              <div
-                class="lab-category"
-                data-i18n="labs.projects.fintech.category"
-              >
-                FINTECH
-              </div>
-              <div class="lab-title" data-i18n="labs.projects.fintech.title">
-                Swarm Testing Infrastructure
-              </div>
-              <div class="lab-tech" data-i18n="labs.projects.fintech.tech">
-                Docker Swarm • Orchestration • Predictive Analytics
-              </div>
-              <div class="lab-desc" data-i18n="labs.projects.fintech.desc">
-                Containerized test environments for large-scale prediction model
-                validation and performance benchmarking
-              </div>
+              <div class="lab-category">{labs.projects.fintech.category}</div>
+              <div class="lab-title">{labs.projects.fintech.title}</div>
+              <div class="lab-tech">{labs.projects.fintech.tech}</div>
+              <div class="lab-desc">{labs.projects.fintech.desc}</div>
             </div>
           </div>
         </div>
@@ -389,108 +261,69 @@
     <!-- Contact Terminal -->
     <section class="contact">
       <div class="section-grid">
-        <div class="section-label" data-i18n="contact.label">06 // Connect</div>
+        <div class="section-label">{contact.label}</div>
         <div>
           <div class="terminal">
             <div class="terminal-header-bar">
               <div class="terminal-dot dot-red"></div>
               <div class="terminal-dot dot-yellow"></div>
               <div class="terminal-dot dot-green"></div>
-              <div class="terminal-title" data-i18n="contact.terminal.title">
-                project_application.sh
-              </div>
+              <div class="terminal-title">{contact.terminal.title}</div>
             </div>
             <div class="terminal-body">
               <div class="terminal-line">
                 <span class="prompt">$</span>
-                <span data-i18n="contact.terminal.command1"
-                  >./application --submit-project</span
-                >
+                <span>{contact.terminal.command1}</span>
               </div>
               <div class="terminal-line">
-                <span class="output" data-i18n="contact.terminal.output1"
-                  >Initializing application protocol...</span
-                >
+                <span class="output">{contact.terminal.output1}</span>
               </div>
               <div class="terminal-line">
-                <span class="output" data-i18n="contact.terminal.warning"
-                  >WARNING: Only exceptional projects considered</span
-                >
+                <span class="output">{contact.terminal.warning}</span>
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
                 <span class="prompt">$</span>
-                <span data-i18n="contact.terminal.command2"
-                  >curl -X POST /evaluate-project</span
-                >
+                <span>{contact.terminal.command2}</span>
               </div>
               <div class="terminal-line">
-                <span
-                  class="input"
-                  data-i18n="contact.terminal.headers.complexity"
-                  >--header "Technical-Complexity: Maximum"</span
-                >
+                <span class="input">{contact.terminal.headers.complexity}</span>
               </div>
               <div class="terminal-line">
-                <span class="input" data-i18n="contact.terminal.headers.impact"
-                  >--header "Industry-Impact: Transformative"</span
-                >
+                <span class="input">{contact.terminal.headers.impact}</span>
               </div>
               <div class="terminal-line">
-                <span class="input" data-i18n="contact.terminal.headers.scale"
-                  >--header "Scale-Ambition: Global"</span
-                >
+                <span class="input">{contact.terminal.headers.scale}</span>
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
                 <span class="output">></span>
-                <span data-i18n="contact.terminal.endpoints"
-                  >Application endpoints:</span
-                >
+                <span>{contact.terminal.endpoints}</span>
               </div>
               <div class="terminal-line">
                 <span class="output"
                   >>
                   <a href="#" class="email-link" onclick="openContactForm()"
-                    ><span data-i18n="contact.terminal.email"
-                      >innovation@impulse.systems</span
-                    ></a
-                  ></span
-                >
-              </div>
-              <div class="terminal-line">
-                <span class="output"
-                  >>
-                  <span data-i18n="contact.terminal.phone"
-                    >+1 (555) IMPULSE</span
+                    ><span>{contact.terminal.email}</span></a
                   ></span
                 >
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
                 <span class="prompt">$</span>
-                <span
-                  class="compose-command"
-                  onclick="openContactForm()"
-                  data-i18n="contact.terminal.compose"
-                  >compose --new-message</span
+                <span class="compose-command" onclick="openContactForm()"
+                  >{contact.terminal.compose}</span
                 >
               </div>
               <div class="terminal-line">
-                <span class="comment" data-i18n="contact.terminal.comment1"
-                  ># Click above to launch secure communication channel</span
-                >
+                <span class="comment">{contact.terminal.comment1}</span>
               </div>
               <div class="terminal-line"></div>
               <div class="terminal-line">
-                <span class="comment" data-i18n="contact.terminal.comment2"
-                  ># Note: Include technical specs, scale requirements,</span
-                >
+                <span class="comment">{contact.terminal.comment2}</span>
               </div>
               <div class="terminal-line">
-                <span class="comment" data-i18n="contact.terminal.comment3"
-                  ># and why this project requires our specific expertise</span
-                >
+                <span class="comment">{contact.terminal.comment3}</span>
               </div>
               <div class="terminal-line">
                 <span class="prompt">$</span> <span class="cursor"></span>
@@ -509,19 +342,14 @@
             <div class="terminal-dot dot-red"></div>
             <div class="terminal-dot dot-yellow"></div>
             <div class="terminal-dot dot-green"></div>
-            <span data-i18n="form.title">secure_message.send</span>
+            <span>{form.title}</span>
           </div>
           <button class="close-btn" onclick="closeContactForm()"></button>
         </div>
         <div class="form-body">
           <div class="success-message" id="successMessage">
-            <strong data-i18n="form.success"
-              >✓ Message transmitted successfully!</strong
-            ><br />
-            <span data-i18n="form.success_desc"
-              >Our engineering team will evaluate your project within 48
-              hours.</span
-            >
+            <strong>{form.success}</strong><br />
+            <span>{form.success_desc}</span>
           </div>
 
           <form
@@ -531,93 +359,57 @@
             autocomplete="off"
           >
             <div class="form-group">
-              <label class="form-label" data-i18n="form.fields.name.label"
-                >$ whoami --name</label
-              >
+              <label class="form-label">{form.fields.name.label}</label>
               <input
                 type="text"
                 class="form-input"
                 name="name"
-                data-i18n-placeholder="form.fields.name.placeholder"
-                placeholder="Enter your full name"
+                placeholder="{form.fields.name.placeholder}"
                 autocomplete="off"
               />
-              <div
-                class="validation-error"
-                id="name-error"
-                data-i18n="form.fields.name.error"
-              >
-                Name is required
+              <div class="validation-error" id="name-error">
+                {form.fields.name.error}
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" data-i18n="form.fields.email.label"
-                >$ echo $EMAIL_ADDRESS</label
-              >
+              <label class="form-label">{form.fields.email.label}</label>
               <input
                 type="text"
                 class="form-input"
                 name="email"
-                data-i18n-placeholder="form.fields.email.placeholder"
-                placeholder="your.email@domain.com"
+                placeholder="{form.fields.email.placeholder}"
                 autocomplete="off"
               />
-              <div
-                class="validation-error"
-                id="email-error"
-                data-i18n="form.fields.email.error"
-              >
-                Valid email address required
+              <div class="validation-error" id="email-error">
+                {form.fields.email.error}
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" data-i18n="form.fields.subject.label"
-                >$ cat project_summary.txt</label
-              >
+              <label class="form-label">{form.fields.subject.label}</label>
               <input
                 type="text"
                 class="form-input"
                 name="subject"
-                data-i18n-placeholder="form.fields.subject.placeholder"
-                placeholder="Brief project title/summary"
+                placeholder="{form.fields.subject.placeholder}"
                 autocomplete="off"
               />
-              <div
-                class="validation-error"
-                id="subject-error"
-                data-i18n="form.fields.subject.error"
-              >
-                Project summary is required
+              <div class="validation-error" id="subject-error">
+                {form.fields.subject.error}
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" data-i18n="form.fields.message.label"
-                >$ vim project_details.md</label
-              >
+              <label class="form-label">{form.fields.message.label}</label>
               <textarea
                 class="form-textarea"
                 name="message"
-                data-i18n-placeholder="form.fields.message.placeholder"
-                placeholder="Technical specifications, scale requirements, timeline, budget range, and why this project requires IMPULSE's expertise...
-
-Example structure:
-- Problem Statement
-- Technical Complexity
-- Scale Requirements  
-- Innovation Impact
-- Timeline & Budget
-- Why IMPULSE?"
+                placeholder="{form.fields.message.placeholder}"
                 autocomplete="off"
               ></textarea>
-              <div
-                class="validation-error"
-                id="message-error"
-                data-i18n="form.fields.message.error"
-              >
-                Project details are required
+              <div class="validation-error" id="message-error">
+                {form.fields.message.error}
               </div>
             </div>
 
@@ -627,7 +419,7 @@ Example structure:
                 class="btn btn-secondary"
                 onclick="closeContactForm()"
               >
-                <span data-i18n="form.buttons.cancel">Cancel</span>
+                <span>{form.buttons.cancel}</span>
               </button>
               <button
                 type="button"
@@ -635,22 +427,18 @@ Example structure:
                 id="submitBtn"
                 onclick="handleFormSubmit()"
               >
-                <span id="submitText" data-i18n="form.buttons.submit"
-                  >./send --secure</span
-                >
+                <span id="submitText">{form.buttons.submit}</span>
               </button>
             </div>
           </form>
         </div>
       </div>
     </div>
-
     <script src="js/translations/en.js"></script>
     <script src="js/translations/fr.js"></script>
     <script src="js/translator.js"></script>
     <script src="js/script.js"></script>
     <script>
-      // Initialize translator
       const translator = new Translator();
       translator.init();
     </script>

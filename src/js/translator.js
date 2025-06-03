@@ -3,7 +3,7 @@ class Translator {
     this.currentLanguage = null;
     this.translations = {};
     this.originalTemplates = new Map();
-    this.templateRegex = /\{\{([^}]+)\}\}/g;
+    this.templateRegex = /\{([^}]+)\}/g;
     this.availableTranslations = {};
   }
 
@@ -61,22 +61,28 @@ class Translator {
       node.textContent = translatedText;
     });
 
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach((element) => {
-      const key = element.getAttribute('data-i18n');
-      const translation = this.getNestedValue(this.translations, key);
-      if (translation) {
-        element.textContent = translation;
-      }
-    });
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
 
-    // Handle placeholder translations
-    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
-    placeholderElements.forEach((element) => {
-      const key = element.getAttribute('data-i18n-placeholder');
-      const translation = this.getNestedValue(this.translations, key);
-      if (translation) {
-        element.placeholder = translation;
+    let node;
+    while ((node = walker.nextNode())) {
+      if (this.templateRegex.test(node.textContent)) {
+        const translatedText = this.translateText(node.textContent);
+        node.textContent = translatedText;
+      }
+    }
+
+    const inputElements = document.querySelectorAll(
+      'input[placeholder], textarea[placeholder]'
+    );
+    inputElements.forEach((element) => {
+      if (this.templateRegex.test(element.placeholder)) {
+        const translatedPlaceholder = this.translateText(element.placeholder);
+        element.placeholder = translatedPlaceholder;
       }
     });
   }
@@ -115,21 +121,13 @@ class Translator {
       }
     }
 
-    const dataI18nElements = element.querySelectorAll('[data-i18n]');
-    dataI18nElements.forEach((el) => {
-      const key = el.getAttribute('data-i18n');
-      const translation = this.getNestedValue(this.translations, key);
-      if (translation) {
-        el.textContent = translation;
-      }
-    });
-
-    const placeholderElements = element.querySelectorAll('[data-i18n-placeholder]');
-    placeholderElements.forEach((el) => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      const translation = this.getNestedValue(this.translations, key);
-      if (translation) {
-        el.placeholder = translation;
+    const inputElements = element.querySelectorAll(
+      'input[placeholder], textarea[placeholder]'
+    );
+    inputElements.forEach((el) => {
+      if (this.templateRegex.test(el.placeholder)) {
+        const translatedPlaceholder = this.translateText(el.placeholder);
+        el.placeholder = translatedPlaceholder;
       }
     });
   }
