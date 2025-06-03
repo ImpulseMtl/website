@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Typewriter effect for hero
   const heroCommand = document.querySelector('.hero-command');
   if (heroCommand) {
-    const originalText = './execute --breakthrough-systems';
+    const originalText = './execute --systems';
     heroCommand.innerHTML = '';
 
     let i = 0;

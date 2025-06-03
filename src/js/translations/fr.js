@@ -50,7 +50,7 @@ const fr = {
   },
   labs: {
     label: "02 // Laboratoires d'Innovation",
-    title: 'Projets Actifs Actuels',
+    title: 'Projets Actifs',
     status: '2 CRÉNEAUX RESTANTS',
     waiting: "ou liste d'attente",
     projects: {
