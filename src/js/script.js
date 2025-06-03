@@ -409,6 +409,90 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// ============================================================================
+// TERMINAL COMMANDS - Easter eggs and shell simulation
+// ============================================================================
+
+const terminalCommands = {
+  'ls': () => 'README.md  src/  package.json  node_modules/  .git/',
+  'htop': () => 'PID  USER  %CPU  %MEM  COMMAND\n1337  impulse  0.1  2.1  ./innovation-engine\n2025  root  99.9  15.2  ./quantum-processor',
+  'df -h': () => 'Filesystem  Size  Used  Avail  Use%\n/dev/nvme0  512G  128G  384G  25%\n/dev/quantum  ∞TB  42GB  ∞TB  0%',
+  'whoami': () => 'innovation-catalyst',
+  'pwd': () => '/home/impulse/innovation-lab',
+  'uname -a': () => 'ImpulseOS 2025.1.0 x86_64 quantum-enhanced',
+  'cat /proc/cpuinfo': () => 'processor: Quantum Processing Unit v2.1\nvendor_id: ImpulseSystems\ncores: ∞',
+  'ps aux': () => 'USER  PID  %CPU  %MEM  COMMAND\nimpulse  1  0.0  0.1  /sbin/init\nimpulse  42  5.2  12.3  ./neural-net\nimpulse  1337  0.1  2.1  ./innovation-engine',
+  'fortune': () => '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
+  'echo hello': () => 'hello',
+  'date': () => new Date().toLocaleString(),
+  'uptime': () => `${Math.floor(Math.random() * 365)} days, ${Math.floor(Math.random() * 24)} hours`,
+  'free -h': () => 'total  used  free  shared  buff/cache  available\n64G   12G   52G   1.2G    3.1G       48G'
+};
+
+function sanitizeInput(input) {
+  return input.replace(/[<>&"']/g, function(match) {
+    const escapeMap = {
+      '<': '&lt;',
+      '>': '&gt;',
+      '&': '&amp;',
+      '"': '&quot;',
+      "'": '&#x27;'
+    };
+    return escapeMap[match];
+  });
+}
+
+function handleTerminalCommand(command) {
+  const terminal = document.querySelector('.terminal-body');
+  const input = document.getElementById('terminalInput');
+  
+  // Sanitize command to prevent XSS
+  const sanitizedCommand = sanitizeInput(command);
+  
+  // Add command to terminal
+  const commandLine = document.createElement('div');
+  commandLine.className = 'terminal-line';
+  commandLine.innerHTML = `<span class="prompt">$</span> <span>${sanitizedCommand}</span>`;
+  
+  // Add output
+  const outputLine = document.createElement('div');
+  outputLine.className = 'terminal-line';
+  
+  if (terminalCommands[command]) {
+    // Use original command for lookup but sanitize output
+    const output = terminalCommands[command]();
+    outputLine.innerHTML = `<span class="output">${sanitizeInput(output)}</span>`;
+  } else {
+    outputLine.innerHTML = `<span class="output">bash: ${sanitizedCommand}: command not found</span>`;
+  }
+  
+  // Insert before input line
+  const inputLine = input.closest('.terminal-line');
+  terminal.insertBefore(commandLine, inputLine);
+  terminal.insertBefore(outputLine, inputLine);
+  
+  // Clear input
+  input.value = '';
+  
+  // Scroll to bottom
+  terminal.scrollTop = terminal.scrollHeight;
+}
+
+// Initialize terminal input
+document.addEventListener('DOMContentLoaded', function() {
+  const terminalInput = document.getElementById('terminalInput');
+  if (terminalInput) {
+    terminalInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const command = this.value.trim();
+        if (command) {
+          handleTerminalCommand(command);
+        }
+      }
+    });
+  }
+});
+
 window.openContactForm = openContactForm;
 window.closeContactForm = closeContactForm;
 window.sendMessage = sendMessage;

@@ -33,6 +33,23 @@ body {
   }
 }
 
+/* Terminal Input Field */
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  outline: none;
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.terminal-input::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
 /* Hero Section - Terminal Style */
 .hero {
   height: 100vh;
@@ -582,6 +599,8 @@ body {
   padding: 2rem;
   font-size: 0.8rem;
   line-height: 1.6;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .terminal-line {

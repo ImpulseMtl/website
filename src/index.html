@@ -45,7 +45,7 @@
           <span>{manifesto.text1}</span>
           <span class="highlight">{manifesto.text2}</span
           ><span>{manifesto.text3}</span>
-          <span class="highlight">{manifesto.text4}</span>.
+          <span class="highlight">{manifesto.text4}</span>
         </div>
       </div>
     </section>
@@ -323,7 +323,7 @@
                 <span class="comment">{contact.terminal.comment3}</span>
               </div>
               <div class="terminal-line">
-                <span class="prompt">$</span> <span class="cursor"></span>
+                <span class="prompt">$</span> <input type="text" class="terminal-input" id="terminalInput" placeholder="Try 'ls', 'htop', 'df -h'...">
               </div>
             </div>
           </div>
@@ -336,7 +336,10 @@
       <div class="nda-modal-terminal">
         <div class="form-header">
           <div class="form-title">
-            <div class="terminal-dot dot-red nda-close-btn" onclick="closeNdaModal()"></div>
+            <div
+              class="terminal-dot dot-red nda-close-btn"
+              onclick="closeNdaModal()"
+            ></div>
             <div class="terminal-dot dot-yellow"></div>
             <div class="terminal-dot dot-green"></div>
             <span>{nda.title}</span>
@@ -363,7 +366,10 @@
       <div class="contact-form-terminal">
         <div class="form-header">
           <div class="form-title">
-            <div class="terminal-dot dot-red form-close-btn" onclick="closeContactForm()"></div>
+            <div
+              class="terminal-dot dot-red form-close-btn"
+              onclick="closeContactForm()"
+            ></div>
             <div class="terminal-dot dot-yellow"></div>
             <div class="terminal-dot dot-green"></div>
             <span>{form.title}</span>
