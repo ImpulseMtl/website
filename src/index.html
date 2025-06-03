@@ -336,12 +336,11 @@
       <div class="nda-modal-terminal">
         <div class="form-header">
           <div class="form-title">
-            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-red nda-close-btn" onclick="closeNdaModal()"></div>
             <div class="terminal-dot dot-yellow"></div>
             <div class="terminal-dot dot-green"></div>
             <span>{nda.title}</span>
           </div>
-          <button class="close-btn" onclick="closeNdaModal()"></button>
         </div>
         <div class="nda-body">
           <div class="nda-content">
@@ -364,12 +363,11 @@
       <div class="contact-form-terminal">
         <div class="form-header">
           <div class="form-title">
-            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-red form-close-btn" onclick="closeContactForm()"></div>
             <div class="terminal-dot dot-yellow"></div>
             <div class="terminal-dot dot-green"></div>
             <span>{form.title}</span>
           </div>
-          <button class="close-btn" onclick="closeContactForm()"></button>
         </div>
         <div class="form-body">
           <div class="success-message" id="successMessage">

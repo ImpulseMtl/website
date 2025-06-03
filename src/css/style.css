@@ -519,6 +519,52 @@ body {
 .dot-red {
   background: #ff5f56;
 }
+
+.nda-close-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: bold;
+  color: transparent;
+}
+
+.nda-close-btn:hover {
+  background: #ff3030 !important;
+  color: #fff;
+  box-shadow: 0 0 10px #ff5f56;
+  transform: scale(1.1);
+}
+
+.nda-close-btn:hover::before {
+  content: "×";
+}
+
+.form-close-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: bold;
+  color: transparent;
+}
+
+.form-close-btn:hover {
+  background: #ff3030 !important;
+  color: #fff;
+  box-shadow: 0 0 10px #ff5f56;
+  transform: scale(1.1);
+}
+
+.form-close-btn:hover::before {
+  content: "×";
+}
 .dot-yellow {
   background: #ffbd2e;
 }
