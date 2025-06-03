@@ -16,36 +16,7 @@ const en = {
     text4:
       "technology doesn't just serve humanity—it amplifies human potential exponentially",
   },
-  selection: {
-    label: '03 // Selection',
-    title: 'We choose 8 innovations per year. Maximum.',
-    description:
-      "Not because we can't handle more. Because breakthrough innovation requires our complete focus. Each project gets the full weight of our expertise, our embedded engineering prowess, and our obsessive attention to technical excellence.",
-    criteria: {
-      technical: {
-        title: 'Technical Complexity',
-        desc: 'Problems that would make other teams walk away',
-      },
-      impact: {
-        title: 'Industry Impact',
-        desc: 'Solutions that reshape entire sectors',
-      },
-      scale: {
-        title: 'Scale Ambition',
-        desc: 'Systems designed for millions, not hundreds',
-      },
-      leadership: {
-        title: 'Technical Leadership',
-        desc: "Teams that understand the magnitude of what we're building",
-      },
-    },
-    status: 'ACCEPTING NEW PROJECTS',
-  },
-  stack: {
-    label: '04 // Stack',
-    title: 'innovation_engine.rs',
-    comment: '// Core Systems',
-  },
+
   labs: {
     label: '02 // Innovation Labs',
     title: 'Current Active Projects',
@@ -90,8 +61,13 @@ const en = {
       },
     },
   },
+  stack: {
+    label: '03 // Stack',
+    title: 'innovation_engine.rs',
+    comment: '// Core Systems',
+  },
   contact: {
-    label: '05 // Connect',
+    label: '04 // Connect',
     terminal: {
       title: 'project_application.sh',
       command1: './application --submit-project',

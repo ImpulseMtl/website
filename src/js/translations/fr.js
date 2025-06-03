@@ -18,36 +18,7 @@ const fr = {
     text4:
       "la technologie ne se contente pas de servir l'humanité—elle amplifie le potentiel humain de manière exponentielle",
   },
-  selection: {
-    label: '03 // Sélection',
-    title: 'Nous choisissons 8 innovations par an. Maximum.',
-    description:
-      "Parce que l'innovation révolutionnaire nécessite toute notre concentration. Chaque projet bénéficie de tout le poids de notre expertise, de notre maîtrise de l'ingénierie embarquée, et de notre attention obsessionnelle à l'excellence technique.",
-    criteria: {
-      technical: {
-        title: 'Complexité Technique',
-        desc: "Des problèmes qui feraient fuir d'autres équipes",
-      },
-      impact: {
-        title: 'Impact Industriel',
-        desc: 'Des solutions qui transforment des secteurs entiers',
-      },
-      scale: {
-        title: "Ambition d'Échelle",
-        desc: 'Des systèmes conçus pour des millions, pas des centaines',
-      },
-      leadership: {
-        title: 'Leadership Technique',
-        desc: "Des équipes qui comprennent l'ampleur de ce que nous construisons",
-      },
-    },
-    status: 'ACCEPTONS DE NOUVEAUX PROJETS',
-  },
-  stack: {
-    label: '04 // Stack',
-    title: 'moteur_innovation.rs',
-    comment: '// Systèmes Centraux',
-  },
+
   labs: {
     label: "02 // Laboratoires d'Innovation",
     title: 'Projets Actifs',
@@ -92,8 +63,13 @@ const fr = {
       },
     },
   },
+  stack: {
+    label: '03 // Stack',
+    title: 'moteur_innovation.rs',
+    comment: '// Systèmes Centraux',
+  },
   contact: {
-    label: '05 // Connexion',
+    label: '04 // Connexion',
     terminal: {
       title: 'candidature_projet.sh',
       command1: './candidature --soumettre-projet',
