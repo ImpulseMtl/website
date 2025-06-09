@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://impulsemtl.ca/sitemap.xml
+
+# Optimize crawl budget
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /js/
+Disallow: /css/
+Disallow: *.js$
+Disallow: *.css$

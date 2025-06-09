@@ -3,21 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Innovation Catalyst</title>
+    <title>IMPULSE Innovation Catalyst | Technical Innovation Labs Montreal</title>
+    <meta name="description" content="Elite innovation catalyst specializing in AgTech, FinTech, AI Systems & Environmental Tech. 2 project slots remaining for 2025. Technical excellence, sustainable solutions, transformative impact." />
+    <meta name="keywords" content="innovation catalyst, technical consulting, agtech development, fintech solutions, AI systems, environmental technology, montreal tech, drone systems, quantum processing" />
+    <meta name="author" content="IMPULSE Systems" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="IMPULSE Innovation Catalyst | Technical Innovation Labs" />
+    <meta property="og:description" content="Elite innovation catalyst specializing in AgTech, FinTech, AI Systems & Environmental Tech. 2 project slots remaining for 2025." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://impulsemtl.ca" />
+    <meta property="og:site_name" content="IMPULSE Innovation Catalyst" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IMPULSE Innovation Catalyst | Technical Innovation Labs" />
+    <meta name="twitter:description" content="Elite innovation catalyst specializing in AgTech, FinTech, AI Systems & Environmental Tech." />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://impulsemtl.ca" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Optimized Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;900&display=swap"
       rel="stylesheet"
+      media="print" onload="this.media='all'"
     />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet" /></noscript>
   </head>
   <body>
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IMPULSE Innovation Catalyst",
+      "description": "Elite innovation catalyst specializing in AgTech, FinTech, AI Systems & Environmental Technology",
+      "url": "https://impulsemtl.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montreal",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-438-869-6012",
+        "email": "projects@impulsemtl.ca",
+        "contactType": "Business"
+      },
+      "sameAs": [],
+      "offers": {
+        "@type": "Service",
+        "name": "Innovation Development Services",
+        "description": "Technical innovation consulting for AgTech, FinTech, AI Systems, and Environmental Technology"
+      }
+    }
+    </script>
     <!-- Hero Section - Terminal Style -->
-    <section class="hero">
+    <section class="hero" role="banner">
       <div class="terminal-header">IMPULSE SYSTEMS //</div>
       <div class="logo-ascii">
-        <pre>
+        <h1 class="sr-only">IMPULSE Innovation Catalyst - Technical Innovation Labs Montreal</h1>
+        <pre aria-label="IMPULSE logo in ASCII art">
          _____ __  __ _____  _    _ _       _____ ______ 
         |_   _|  \/  |  __ \| |  | | |     / ____|  ____|
           | | | \  / | |__) | |  | | |    | (___ | |__   
@@ -38,10 +92,11 @@
     </section>
 
     <!-- Manifesto Section -->
-    <section class="manifesto">
+    <section class="manifesto" role="main">
       <div class="section-grid">
         <div class="section-label">{manifesto.label}</div>
         <div class="manifesto-text">
+          <h2 class="sr-only">Our Innovation Philosophy</h2>
           <span>{manifesto.text1}</span>
           <span class="highlight">{manifesto.text2}</span
           ><span>{manifesto.text3}</span>
@@ -51,12 +106,12 @@
     </section>
 
     <!-- Innovation Labs -->
-    <section class="labs">
+    <section class="labs" role="region" aria-labelledby="labs-title">
       <div class="section-grid">
         <div class="section-label">{labs.label}</div>
         <div>
           <div class="labs-header">
-            <h2 class="labs-title">{labs.title}</h2>
+            <h2 class="labs-title" id="labs-title">{labs.title}</h2>
             <div class="labs-status">
               <span class="status-text">{labs.status}</span>
               <span class="waiting-list">{labs.waiting}</span>
@@ -64,58 +119,58 @@
           </div>
 
           <div class="lab-grid">
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">{labs.projects.agtech.category}</div>
-              <div class="lab-title">{labs.projects.agtech.title}</div>
+              <h3 class="lab-title">{labs.projects.agtech.title}</h3>
               <div class="lab-tech">{labs.projects.agtech.tech}</div>
               <div class="lab-desc">{labs.projects.agtech.desc}</div>
-            </div>
+            </article>
 
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">
                 {labs.projects.environmental.category}
               </div>
-              <div class="lab-title">{labs.projects.environmental.title}</div>
+              <h3 class="lab-title">{labs.projects.environmental.title}</h3>
               <div class="lab-tech">{labs.projects.environmental.tech}</div>
               <div class="lab-desc">{labs.projects.environmental.desc}</div>
-            </div>
+            </article>
 
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">
                 {labs.projects.automotive.category}
               </div>
-              <div class="lab-title">{labs.projects.automotive.title}</div>
+              <h3 class="lab-title">{labs.projects.automotive.title}</h3>
               <div class="lab-tech">{labs.projects.automotive.tech}</div>
               <div class="lab-desc">{labs.projects.automotive.desc}</div>
-            </div>
+            </article>
 
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">{labs.projects.ai.category}</div>
-              <div class="lab-title">{labs.projects.ai.title}</div>
+              <h3 class="lab-title">{labs.projects.ai.title}</h3>
               <div class="lab-tech">{labs.projects.ai.tech}</div>
               <div class="lab-desc">{labs.projects.ai.desc}</div>
-            </div>
+            </article>
 
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">{labs.projects.social.category}</div>
-              <div class="lab-title">{labs.projects.social.title}</div>
+              <h3 class="lab-title">{labs.projects.social.title}</h3>
               <div class="lab-tech">{labs.projects.social.tech}</div>
               <div class="lab-desc">{labs.projects.social.desc}</div>
-            </div>
+            </article>
 
-            <div class="lab-item">
+            <article class="lab-item">
               <div class="lab-category">{labs.projects.fintech.category}</div>
-              <div class="lab-title">{labs.projects.fintech.title}</div>
+              <h3 class="lab-title">{labs.projects.fintech.title}</h3>
               <div class="lab-tech">{labs.projects.fintech.tech}</div>
               <div class="lab-desc">{labs.projects.fintech.desc}</div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Terminal -->
-    <section class="contact">
+    <section class="contact" role="contentinfo">
       <div class="section-grid">
         <div class="section-label">{contact.label}</div>
         <div>
@@ -308,13 +363,16 @@
         </div>
       </div>
     </div>
-    <script src="js/translations/en.js"></script>
-    <script src="js/translations/fr.js"></script>
-    <script src="js/translator.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-      const translator = new Translator();
-      translator.init();
+    <!-- Optimized Script Loading -->
+    <script src="js/translations/en.js" defer></script>
+    <script src="js/translations/fr.js" defer></script>
+    <script src="js/translator.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function() {
+        const translator = new Translator();
+        translator.init();
+      });
     </script>
   </body>
 </html>
