@@ -31,9 +31,9 @@ const fr = {
       },
       environmental: {
         category: 'ENVIRONNEMENTAL',
-        title: "Réseaux d'Intelligence Aquatique",
+        title: "Système d'Intelligence Aquatique",
         tech: 'Capteur Aquatique • Détection Edge • Analytiques Temps Réel',
-        desc: "Systèmes avancés de détection pour de l'intelligence environnementale complète",
+        desc: "Systèmes avancés de détection pour de l'intelligence environnementale.",
       },
       automotive: {
         category: 'AUTOMOBILE',

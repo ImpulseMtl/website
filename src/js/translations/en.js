@@ -29,7 +29,7 @@ const en = {
       },
       environmental: {
         category: 'ENVIRONMENTAL',
-        title: 'Aquatic Intelligence Networks',
+        title: 'Aquatic Intelligence Systems',
         tech: 'Aquatic sensor • Edge Detection • Real-time Analytics',
         desc: 'Advanced payload detection systems for comprehensive environmental intelligence',
       },
