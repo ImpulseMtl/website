@@ -61,13 +61,8 @@ const fr = {
       },
     },
   },
-  stack: {
-    label: '03 // Stack',
-    title: 'moteur_innovation.rs',
-    comment: '// Systèmes Centraux',
-  },
   contact: {
-    label: '04 // Connexion',
+    label: '03 // Connexion',
     terminal: {
       title: 'candidature_projet.sh',
       command1: './candidature --soumettre-projet',
@@ -123,8 +118,10 @@ const fr = {
   nda: {
     title: 'divulgation_projet.sh',
     headline: 'Accès Projet : NDA Requis',
-    message1: 'Tous les projets actifs sont protégés par des accords de non-divulgation.',
-    message2: 'Nous serions ravis de discuter des détails du projet avec des partenaires qualifiés.',
+    message1:
+      'Tous les projets actifs sont protégés par des accords de non-divulgation.',
+    message2:
+      'Nous serions ravis de discuter des détails du projet avec des partenaires qualifiés.',
     action_text: 'Prendre Contact',
     footer: '# Protocoles de confidentialité actifs',
   },

@@ -59,13 +59,8 @@ const en = {
       },
     },
   },
-  stack: {
-    label: '03 // Stack',
-    title: 'innovation_engine.rs',
-    comment: '// Core Systems',
-  },
   contact: {
-    label: '04 // Connect',
+    label: '03 // Connect',
     terminal: {
       title: 'project_application.sh',
       command1: './application --submit-project',
@@ -118,8 +113,10 @@ const en = {
   nda: {
     title: 'project_disclosure.sh',
     headline: 'Project Access: NDA Required',
-    message1: 'All active projects are protected under non-disclosure agreements.',
-    message2: 'We would be pleased to discuss project details with qualified partners.',
+    message1:
+      'All active projects are protected under non-disclosure agreements.',
+    message2:
+      'We would be pleased to discuss project details with qualified partners.',
     action_text: 'Get In Touch',
     footer: '# Confidentiality protocols active',
   },
