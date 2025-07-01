@@ -72,7 +72,7 @@ const en = {
         scale: '--header "Scale-Ambition: Global"',
       },
       endpoints: 'Application endpoints:',
-      email: 'innovation@impulsemtl.ca',
+      email: 'pierre@impulsemtl.ca',
       compose: 'compose --new-message',
       comment1: '# Click above to send your project proposal',
     },

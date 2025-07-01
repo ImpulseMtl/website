@@ -24,7 +24,7 @@ const IMPULSE_CONFIG = {
   aerospaceScale: '1000+',
 
   // Contact information
-  contactEmail: 'projects@impulsemtl.ca',
+  contactEmail: 'pierre@impulsemtl.ca',
   contactPhone: '+1 (438) 869-6012',
 };
 
@@ -291,48 +291,62 @@ function handleFormSubmit() {
 
   if (!form || !submitBtn || !submitText || !successMessage) return;
 
-  // Get form data and validate
   const formData = new FormData(form);
 
-  // Custom validation
-  if (!validateForm(formData)) {
-    return; // Stop if validation fails
+  if (formData.get('website') || formData.get('phone')) {
+    console.log('Bot detected via honeypot');
+    return;
   }
 
-  // Show loading state with enhanced animation
+  if (!validateForm(formData)) {
+    return;
+  }
+
   form.classList.add('loading');
   submitBtn.classList.add('transmitting');
   submitText.innerHTML = '<span class="spinner"></span>Transmitting...';
 
-  const data = {
-    name: formData.get('name'),
-    email: formData.get('email'),
+  const templateParams = {
+    from_name: formData.get('name'),
+    from_email: formData.get('email'),
     subject: formData.get('subject'),
     message: formData.get('message'),
+    to_email: 'pierre@impulsemtl.ca',
   };
 
-  // Simulate API call (replace with your actual endpoint)
-  setTimeout(() => {
-    // In a real implementation, you'd send this to your backend
-    console.log('Form data:', data);
+  emailjs
+    .send(
+      'service_swv8bfl',
+      'template_g876egx',
+      templateParams,
+      'NjdHYdoLfoFc1Oqt9'
+    )
+    .then(() => {
+      // Success
+      form.classList.remove('loading');
+      submitBtn.classList.remove('transmitting');
+      submitText.innerHTML = './send';
+      successMessage.classList.add('show');
+      hideAllValidationErrors();
 
-    // Show success message
-    form.classList.remove('loading');
-    submitBtn.classList.remove('transmitting');
-    submitText.innerHTML = './send --secure';
-    successMessage.classList.add('show');
-    hideAllValidationErrors();
+      setTimeout(() => {
+        form.reset();
+      }, 1000);
 
-    // Reset form after delay
-    setTimeout(() => {
-      form.reset();
-    }, 1000);
+      setTimeout(() => {
+        closeContactForm();
+      }, 3000);
+    })
+    .catch(() => {
+      form.classList.remove('loading');
+      submitBtn.classList.remove('transmitting');
+      submitText.innerHTML = './send';
 
-    // Auto-close modal after 3 seconds
-    setTimeout(() => {
-      closeContactForm();
-    }, 3000);
-  }, 2000); // Simulate network delay
+      showValidationError(
+        'message',
+        'Failed to send message. Please try again in a moment.'
+      );
+    });
 }
 
 function sendMessage(event) {
@@ -340,7 +354,6 @@ function sendMessage(event) {
   handleFormSubmit();
 }
 
-// Event listeners for contact form
 document.addEventListener('DOMContentLoaded', function () {
   // Close modal on escape key
   document.addEventListener('keydown', function (event) {
@@ -349,7 +362,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Close modal on outside click
   const modal = document.getElementById('contactModal');
   if (modal) {
     modal.addEventListener('click', function (event) {
@@ -388,9 +400,7 @@ function openContactFromNda() {
   }, 300);
 }
 
-// Event listeners for NDA modal
 document.addEventListener('DOMContentLoaded', function () {
-  // Close NDA modal on escape key
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       const ndaModal = document.getElementById('ndaModal');
@@ -400,7 +410,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Close NDA modal on outside click
   const ndaModal = document.getElementById('ndaModal');
   if (ndaModal) {
     ndaModal.addEventListener('click', function (event) {
@@ -416,29 +425,38 @@ document.addEventListener('DOMContentLoaded', function () {
 // ============================================================================
 
 const terminalCommands = {
-  'ls': () => 'README.md  src/  package.json  node_modules/  .git/',
-  'htop': () => 'PID  USER  %CPU  %MEM  COMMAND\n1337  impulse  0.1  2.1  ./innovation-engine\n2025  root  99.9  15.2  ./quantum-processor',
-  'df -h': () => 'Filesystem  Size  Used  Avail  Use%\n/dev/nvme0  512G  128G  384G  25%\n/dev/quantum  ∞TB  42GB  ∞TB  0%',
-  'whoami': () => 'innovation-catalyst',
-  'pwd': () => '/home/impulse/innovation-lab',
+  ls: () => 'README.md  src/  package.json  node_modules/  .git/',
+  htop: () =>
+    'PID  USER  %CPU  %MEM  COMMAND\n1337  impulse  0.1  2.1  ./innovation-engine\n2025  root  99.9  15.2  ./quantum-processor',
+  'df -h': () =>
+    'Filesystem  Size  Used  Avail  Use%\n/dev/nvme0  512G  128G  384G  25%\n/dev/quantum  ∞TB  42GB  ∞TB  0%',
+  whoami: () => 'innovation-catalyst',
+  pwd: () => '/home/impulse/innovation-lab',
   'uname -a': () => 'ImpulseOS 2025.1.0 x86_64 quantum-enhanced',
-  'cat /proc/cpuinfo': () => 'processor: Quantum Processing Unit v2.1\nvendor_id: ImpulseSystems\ncores: ∞',
-  'ps aux': () => 'USER  PID  %CPU  %MEM  COMMAND\nimpulse  1  0.0  0.1  /sbin/init\nimpulse  42  5.2  12.3  ./neural-net\nimpulse  1337  0.1  2.1  ./innovation-engine',
-  'fortune': () => '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
+  'cat /proc/cpuinfo': () =>
+    'processor: Quantum Processing Unit v2.1\nvendor_id: ImpulseSystems\ncores: ∞',
+  'ps aux': () =>
+    'USER  PID  %CPU  %MEM  COMMAND\nimpulse  1  0.0  0.1  /sbin/init\nimpulse  42  5.2  12.3  ./neural-net\nimpulse  1337  0.1  2.1  ./innovation-engine',
+  fortune: () =>
+    '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
   'echo hello': () => 'hello',
-  'date': () => new Date().toLocaleString(),
-  'uptime': () => `${Math.floor(Math.random() * 365)} days, ${Math.floor(Math.random() * 24)} hours`,
-  'free -h': () => 'total  used  free  shared  buff/cache  available\n64G   12G   52G   1.2G    3.1G       48G'
+  date: () => new Date().toLocaleString(),
+  uptime: () =>
+    `${Math.floor(Math.random() * 365)} days, ${Math.floor(
+      Math.random() * 24
+    )} hours`,
+  'free -h': () =>
+    'total  used  free  shared  buff/cache  available\n64G   12G   52G   1.2G    3.1G       48G',
 };
 
 function sanitizeInput(input) {
-  return input.replace(/[<>&"']/g, function(match) {
+  return input.replace(/[<>&"']/g, function (match) {
     const escapeMap = {
       '<': '&lt;',
       '>': '&gt;',
       '&': '&amp;',
       '"': '&quot;',
-      "'": '&#x27;'
+      "'": '&#x27;',
     };
     return escapeMap[match];
   });
@@ -447,44 +465,42 @@ function sanitizeInput(input) {
 function handleTerminalCommand(command) {
   const terminal = document.querySelector('.terminal-body');
   const input = document.getElementById('terminalInput');
-  
+
   // Sanitize command to prevent XSS
   const sanitizedCommand = sanitizeInput(command);
-  
+
   // Add command to terminal
   const commandLine = document.createElement('div');
   commandLine.className = 'terminal-line';
   commandLine.innerHTML = `<span class="prompt">$</span> <span>${sanitizedCommand}</span>`;
-  
+
   // Add output
   const outputLine = document.createElement('div');
   outputLine.className = 'terminal-line';
-  
+
   if (terminalCommands[command]) {
     // Use original command for lookup but sanitize output
     const output = terminalCommands[command]();
-    outputLine.innerHTML = `<span class="output">${sanitizeInput(output)}</span>`;
+    outputLine.innerHTML = `<span class="output">${sanitizeInput(
+      output
+    )}</span>`;
   } else {
     outputLine.innerHTML = `<span class="output">bash: ${sanitizedCommand}: command not found</span>`;
   }
-  
-  // Insert before input line
+
   const inputLine = input.closest('.terminal-line');
   terminal.insertBefore(commandLine, inputLine);
   terminal.insertBefore(outputLine, inputLine);
-  
-  // Clear input
+
   input.value = '';
-  
-  // Scroll to bottom
   terminal.scrollTop = terminal.scrollHeight;
 }
 
 // Initialize terminal input
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const terminalInput = document.getElementById('terminalInput');
   if (terminalInput) {
-    terminalInput.addEventListener('keypress', function(e) {
+    terminalInput.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         const command = this.value.trim();
         if (command) {

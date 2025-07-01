@@ -4,7 +4,7 @@ const fr = {
     prompt: 'innovation@impulse:~$',
     command: './execute --systemes',
     available_slots:
-      "Actuellement : 2 créneaux d'innovations encore ouvertes pour 2025",
+      "Actuellement : 2 créneaux d'innovations encore ouverts pour 2025",
   },
 
   manifesto: {
@@ -74,7 +74,7 @@ const fr = {
         scale: '--header "Ambition-Échelle: Mondiale"',
       },
       endpoints: 'Points de terminaison de candidature :',
-      email: 'innovation@impulsemlt.ca',
+      email: 'pierre@impulsemtl.ca',
       compose: 'composer --nouveau-message',
       comment1: '# Cliquez ci-dessus pour envoyer votre proposition de projet',
       comment2:
